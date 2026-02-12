@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-cream: #FAF8F5;
+  --color-ink: #1a1a1a;
+  --color-ink-light: #4a4a4a;
+  --color-grid: #bcc8d4;
+  --color-coral: #E8573A;
+  --color-blue: #2563EB;
+  --color-gold: #D4A017;
+  --color-coral-light: #fef2f0;
+  --color-blue-light: #eff4ff;
+  --color-gold-light: #fdf8eb;
+  --font-mono: var(--font-ibm-plex-mono);
+  --font-display: var(--font-playfair-display);
+}
+
+/* ── Graph Paper Background ────────────────────────────────── */
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-mono);
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--color-grid) 35%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-grid) 35%, transparent) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: -1px -1px;
+  background-attachment: fixed;
+}
+
+/* Fade grid on small screens */
+@media (max-width: 640px) {
+  body {
+    background-image:
+      linear-gradient(color-mix(in srgb, var(--color-grid) 40%, transparent) 1px, transparent 1px),
+      linear-gradient(90deg, color-mix(in srgb, var(--color-grid) 40%, transparent) 1px, transparent 1px);
+  }
+}
+
+/* ── Smooth Scrolling ──────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Selection Color ───────────────────────────────────────── */
+::selection {
+  background-color: var(--color-coral);
+  color: white;
+}
+
+/* ── Section Divider ───────────────────────────────────────── */
+.section-divider {
+  position: relative;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--color-ink) 0px,
+    var(--color-ink) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  opacity: 0.15;
+}
+
+/* ── Label / Stamp Aesthetic ───────────────────────────────── */
+.stamp {
+  display: inline-block;
+  border: 2px solid var(--color-ink);
+  padding: 2px 10px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transform: rotate(-1deg);
+}
+
+/* ── Hand-drawn annotation circle ──────────────────────────── */
+.annotation-circle {
+  position: relative;
+}
+.annotation-circle::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border: 2px solid var(--color-coral);
+  border-radius: 50%;
+  opacity: 0.5;
+  transform: rotate(-2deg);
+  pointer-events: none;
+}
+
+/* ── Margin note ───────────────────────────────────────────── */
+.margin-note {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--color-ink-light);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  position: absolute;
+  left: -2rem;
+  top: 0;
+}
+
+/* ── Link hover underline ──────────────────────────────────── */
+a.accent-link {
+  text-decoration: none;
+  background-image: linear-gradient(var(--color-coral), var(--color-coral));
+  background-size: 0% 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease;
+}
+a.accent-link:hover {
+  background-size: 100% 2px;
+}
+
+/* ── Glyph pulse on hover ──────────────────────────────────── */
+.glyph {
+  display: inline-block;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.glyph:hover {
+  transform: scale(1.2) rotate(15deg);
+  color: var(--color-coral);
+}

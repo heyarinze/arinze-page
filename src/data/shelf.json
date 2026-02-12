@@ -1,0 +1,62 @@
+{
+  "currentlyReading": [
+    {
+      "title": "Tomorrow, and Tomorrow, and Tomorrow",
+      "author": "Gabrielle Zevin",
+      "cover": "/books/tomorrow.jpg"
+    },
+    {
+      "title": "The Pragmatic Programmer",
+      "author": "David Thomas & Andrew Hunt",
+      "cover": "/books/pragmatic.jpg"
+    },
+    {
+      "title": "Parable of the Sower",
+      "author": "Octavia E. Butler",
+      "cover": "/books/parable.jpg"
+    }
+  ],
+  "recentlyPlayed": [
+    {
+      "track": "Tinariwen",
+      "artist": "Chatma",
+      "album": "Amatssou",
+      "albumArt": "/music/placeholder.jpg"
+    },
+    {
+      "track": "Redbone",
+      "artist": "Childish Gambino",
+      "album": "Awaken, My Love!",
+      "albumArt": "/music/placeholder.jpg"
+    },
+    {
+      "track": "Green Light",
+      "artist": "Lorde",
+      "album": "Melodrama",
+      "albumArt": "/music/placeholder.jpg"
+    }
+  ],
+  "published": [
+    {
+      "title": "What AI Gets Wrong About Education",
+      "type": "Article",
+      "outlet": "Personal Blog",
+      "date": "2024",
+      "link": "#"
+    },
+    {
+      "title": "Designing for Delight: Lessons from Game Design",
+      "type": "Talk",
+      "outlet": "EdTech Conference 2024",
+      "date": "2024",
+      "link": "#"
+    },
+    {
+      "title": "The Case for Playful Software",
+      "type": "Essay",
+      "outlet": "Medium",
+      "date": "2023",
+      "link": "#"
+    }
+  ]
+}
