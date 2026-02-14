@@ -13,7 +13,7 @@ const glyphMarkers = ["◆", "✦", "▲", "◎"];
 export default function Work() {
   return (
     <section className="max-w-5xl mx-auto px-6">
-      <SectionHeader title="Work & Projects" glyph="◆" id="work" />
+      <SectionHeader title="My Work" glyph="◆" id="work" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project, i) => (

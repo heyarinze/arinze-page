@@ -21,7 +21,7 @@ const socials = [
   },
   {
     label: "Email",
-    href: "mailto:hello@example.com",
+    href: "mailto:heyarinze@gmail.com",
     glyph: "→",
   },
 ];

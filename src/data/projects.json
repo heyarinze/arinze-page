@@ -1,30 +1,30 @@
 [
   {
-    "title": "AI Tutoring Platform",
-    "organization": "EdTech Startup",
-    "dateRange": "2024 — Present",
-    "description": "Building an adaptive learning platform that uses large language models to provide personalized tutoring experiences for K-12 students.",
-    "link": "#"
+    "title": "Claude@Stanford",
+    "organization": "Stanford University",
+    "dateRange": "Present",
+    "description": "Building and running the community of Stanford students building and learning with Claude — the largest in the US.",
+    "link": null
   },
   {
-    "title": "Interactive Documentary Series",
-    "organization": "Media Lab",
-    "dateRange": "2023 — 2024",
-    "description": "Produced and directed a multi-part interactive documentary exploring the intersection of technology and storytelling in West Africa.",
-    "link": "#"
+    "title": "Non-Disclosure",
+    "organization": "Stanford GSB",
+    "dateRange": "Present",
+    "description": "Leading Stanford GSB's student paper's exploration into new creative and editorial formats as its first creative director.",
+    "link": null
   },
   {
-    "title": "Curriculum Engine",
-    "organization": "Open Education Project",
-    "dateRange": "2023",
-    "description": "Designed an open-source engine that generates standards-aligned lesson plans using structured data and generative AI.",
-    "link": "#"
+    "title": "Kenga Media",
+    "organization": "Co-Founder & Publisher",
+    "dateRange": "2021 — 2023",
+    "description": "Co-founded a digital and print publication covering Africa's Gen Z culture and insights and ran it for two years as publisher.",
+    "link": null
   },
   {
-    "title": "Community Radio App",
-    "organization": "Freelance",
-    "dateRange": "2022 — 2023",
-    "description": "Built a mobile-first web application for community radio stations to stream, archive, and share programming with local audiences.",
+    "title": "EarlyAdmit",
+    "organization": "Co-Founder · Acquired 2023",
+    "dateRange": "2020 — 2023",
+    "description": "Co-founded a coaching platform helping students from underrepresented minority backgrounds get into top grad programs.",
     "link": null
   }
 ]

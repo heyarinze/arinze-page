@@ -125,3 +125,19 @@ a.accent-link:hover {
   transform: scale(1.2) rotate(15deg);
   color: var(--color-coral);
 }
+
+/* ── Floating animation for glassmorphism photo ────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes float-shadow {
+  0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.1; }
+  50% { transform: translateX(-50%) scale(0.85); opacity: 0.06; }
+}
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+.animate-float-shadow {
+  animation: float-shadow 4s ease-in-out infinite;
+}

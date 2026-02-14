@@ -1,12 +1,14 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 const links = [
   { label: "Home", href: "#home", glyph: "◎" },
   { label: "About", href: "#about", glyph: "△" },
   { label: "Work", href: "#work", glyph: "◆" },
-  { label: "Shelf", href: "#shelf", glyph: "✦" },
+  { label: "Essays", href: "#essays", glyph: "▲" },
+  { label: "Bookshelf", href: "#shelf", glyph: "✦" },
   { label: "Newsletter", href: "#newsletter", glyph: "◇" },
 ];
 
@@ -18,9 +20,15 @@ export default function Navigation() {
       <div className="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between">
         <a
           href="#home"
-          className="font-display text-lg font-bold tracking-tight text-ink hover:text-coral transition-colors"
+          className="flex items-center hover:opacity-80 transition-opacity"
         >
-          A.O.
+          <Image
+            src="/favicon.ico"
+            alt="A.O."
+            width={28}
+            height={28}
+            className="rounded-sm"
+          />
         </a>
 
         {/* Desktop */}

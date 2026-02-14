@@ -28,10 +28,10 @@ export default function Hero() {
         {/* Tagline */}
         <p className="mt-4 text-sm sm:text-base text-ink-light tracking-wide max-w-lg">
           <span className="text-coral glyph mr-1">▲</span>
-          building at the intersection of{" "}
-          <span className="text-blue font-medium">AI</span>,{" "}
-          <span className="text-coral font-medium">startups</span>, and{" "}
-          <span className="text-gold font-medium">culture</span>
+          curious about{" "}
+          <span className="text-blue font-medium">adulting</span>,{" "}
+          <span className="text-coral font-medium">AI</span>, and{" "}
+          <span className="text-gold font-medium">late-stage capitalism</span>
         </p>
 
         {/* Intro paragraph */}
