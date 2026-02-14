@@ -7,6 +7,7 @@ const links = [
   { label: "About", href: "#about", glyph: "△" },
   { label: "Work", href: "#work", glyph: "◆" },
   { label: "Shelf", href: "#shelf", glyph: "✦" },
+  { label: "Newsletter", href: "#newsletter", glyph: "◇" },
 ];
 
 export default function Navigation() {

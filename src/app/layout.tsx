@@ -17,9 +17,9 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Arinze Obiezue — Digital Living Room",
+  title: "Arinze Obiezue",
   description:
-    "Building at the intersection of AI, education, and entertainment.",
+    "Building at the intersection of AI, startups, and culture.",
 };
 
 export default function RootLayout({

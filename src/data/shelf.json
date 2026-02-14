@@ -38,25 +38,32 @@
   ],
   "published": [
     {
-      "title": "What AI Gets Wrong About Education",
+      "title": "Getting into the 2+2 Deferred MBA Programs at Harvard and Stanford",
       "type": "Article",
-      "outlet": "Personal Blog",
-      "date": "2024",
-      "link": "#"
+      "outlet": "LinkedIn",
+      "date": "",
+      "link": "https://www.linkedin.com/pulse/getting-deferred-mba-programs-harvard-stanford-arinze-obiezue/"
     },
     {
-      "title": "Designing for Delight: Lessons from Game Design",
-      "type": "Talk",
-      "outlet": "EdTech Conference 2024",
-      "date": "2024",
-      "link": "#"
-    },
-    {
-      "title": "The Case for Playful Software",
+      "title": "Prompting is the New Thinking: Learning Smarter with Claude AI",
       "type": "Essay",
-      "outlet": "Medium",
-      "date": "2023",
-      "link": "#"
+      "outlet": "Substack",
+      "date": "",
+      "link": "https://heyarinze.substack.com/p/prompting-is-the-new-thinking"
+    },
+    {
+      "title": "We Need Our Patronus Charm Now More Than Ever",
+      "type": "Essay",
+      "outlet": "Substack",
+      "date": "",
+      "link": "https://heyarinze.substack.com/p/we-need-our-patronus-charm-now-more"
+    },
+    {
+      "title": "Personal apps are becoming my new favorite thing",
+      "type": "Essay",
+      "outlet": "Substack",
+      "date": "",
+      "link": "https://heyarinze.substack.com/p/why-personal-apps-are-my-new-favorite"
     }
   ]
 }

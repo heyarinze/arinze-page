@@ -30,8 +30,8 @@ export default function Hero() {
           <span className="text-coral glyph mr-1">▲</span>
           building at the intersection of{" "}
           <span className="text-blue font-medium">AI</span>,{" "}
-          <span className="text-coral font-medium">education</span>, and{" "}
-          <span className="text-gold font-medium">entertainment</span>
+          <span className="text-coral font-medium">startups</span>, and{" "}
+          <span className="text-gold font-medium">culture</span>
         </p>
 
         {/* Intro paragraph */}
@@ -40,8 +40,8 @@ export default function Hero() {
           <p className="text-sm leading-relaxed text-ink-light">
             Welcome to my digital living room. This is where I keep track of
             what I&apos;m building, reading, listening to, and thinking about.
-            Pull up a chair — look around. Everything here is a work in
-            progress, just like the things I care about.
+            Pull up a chair — look around. Everything here, like me, is a work
+            in progress.
           </p>
         </div>
 

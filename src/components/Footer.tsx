@@ -1,12 +1,22 @@
 const socials = [
   {
-    label: "Twitter / X",
-    href: "https://x.com",
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/arinzeobiezue",
     glyph: "→",
   },
   {
-    label: "LinkedIn",
-    href: "https://linkedin.com",
+    label: "X",
+    href: "https://www.x.com/heyarinze",
+    glyph: "→",
+  },
+  {
+    label: "TikTok",
+    href: "https://www.tiktok.com/@helloarinze",
+    glyph: "→",
+  },
+  {
+    label: "Wabi",
+    href: "https://wabi.ai/@heyarinze",
     glyph: "→",
   },
   {
@@ -24,7 +34,7 @@ export default function Footer() {
           <span className="glyph text-coral mr-1">◇</span>
           Arinze Obiezue &copy; {new Date().getFullYear()}
         </p>
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 flex-wrap justify-center">
           {socials.map((s) => (
             <a
               key={s.label}
