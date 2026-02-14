@@ -1,5 +1,12 @@
 import { Glyph } from "./Glyph";
 
+const socials = [
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/arinzeobiezue" },
+  { label: "X", href: "https://www.x.com/heyarinze" },
+  { label: "TikTok", href: "https://www.tiktok.com/@helloarinze" },
+  { label: "Wabi", href: "https://wabi.ai/@heyarinze" },
+];
+
 export default function Hero() {
   return (
     <section
@@ -33,6 +40,21 @@ export default function Hero() {
           <span className="text-coral font-medium">AI</span>, and{" "}
           <span className="text-gold font-medium">late-stage capitalism</span>
         </p>
+
+        {/* Social icons */}
+        <div className="mt-5 flex items-center gap-4">
+          {socials.map((s) => (
+            <a
+              key={s.label}
+              href={s.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs uppercase tracking-widest text-ink-light/50 hover:text-coral transition-colors"
+            >
+              {s.label} <span className="text-[10px]">→</span>
+            </a>
+          ))}
+        </div>
 
         {/* Intro paragraph */}
         <div className="mt-8 max-w-xl relative">

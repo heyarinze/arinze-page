@@ -3,6 +3,7 @@ import { IBM_Plex_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import FloatingAdinkra from "@/components/FloatingAdinkra";
 
 const ibmPlexMono = IBM_Plex_Mono({
   variable: "--font-ibm-plex-mono",
@@ -32,8 +33,9 @@ export default function RootLayout({
       <body
         className={`${ibmPlexMono.variable} ${playfairDisplay.variable} antialiased font-mono`}
       >
+        <FloatingAdinkra />
         <Navigation />
-        <main>{children}</main>
+        <main className="relative z-10">{children}</main>
         <Footer />
       </body>
     </html>

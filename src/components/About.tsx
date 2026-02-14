@@ -8,25 +8,16 @@ export default function About() {
       <SectionHeader title="About" glyph="△" id="about" />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-        {/* Photo with glassmorphism float */}
+        {/* Photo with drop shadow */}
         <div className="md:col-span-1 flex justify-center md:justify-start">
-          <div className="relative group">
-            {/* Floating glass container */}
-            <div className="relative w-48 h-64 rounded-2xl overflow-hidden shadow-lg backdrop-blur-sm bg-white/10 border border-white/20 animate-float">
-              {/* Subtle gradient overlay for glass effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-white/5 z-10 pointer-events-none" />
-              {/* Reflection line */}
-              <div className="absolute top-0 left-0 right-0 h-1/3 bg-gradient-to-b from-white/15 to-transparent z-10 pointer-events-none" />
-              <Image
-                src={aboutData.photo}
-                alt="Arinze Obiezue"
-                fill
-                className="object-cover"
-                sizes="192px"
-              />
-            </div>
-            {/* Shadow beneath for floating effect */}
-            <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-36 h-4 bg-ink/10 rounded-full blur-md animate-float-shadow" />
+          <div className="relative w-48 h-48 rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.15)]">
+            <Image
+              src={aboutData.photo}
+              alt="Arinze Obiezue"
+              fill
+              className="object-cover"
+              sizes="192px"
+            />
           </div>
         </div>
 

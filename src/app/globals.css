@@ -141,3 +141,25 @@ a.accent-link:hover {
 .animate-float-shadow {
   animation: float-shadow 4s ease-in-out infinite;
 }
+
+/* ── Floating Adinkra bubble animation ─────────────────────── */
+@keyframes adinkra-rise {
+  0% {
+    transform: translateY(110vh) rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: var(--adinkra-opacity, 0.05);
+  }
+  90% {
+    opacity: var(--adinkra-opacity, 0.05);
+  }
+  100% {
+    transform: translateY(-10vh) rotate(360deg) scale(1.1);
+    opacity: 0;
+  }
+}
+.adinkra-bubble {
+  animation: adinkra-rise linear infinite;
+  will-change: transform, opacity;
+}
