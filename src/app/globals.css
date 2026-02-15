@@ -14,6 +14,7 @@
   --color-gold-light: #fdf8eb;
   --font-mono: var(--font-ibm-plex-mono);
   --font-display: var(--font-playfair-display);
+  --font-cursive: var(--font-dancing-script);
 }
 
 /* ── Graph Paper Background ────────────────────────────────── */

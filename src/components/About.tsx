@@ -39,12 +39,12 @@ export default function About() {
               sizes="192px"
             />
           </div>
-          <p className="text-xs tracking-wide text-center md:text-left">
-            <span className="text-purple font-medium">Schwarzman Scholar</span>
+          <p className="font-cursive text-sm text-center md:text-left" style={{ letterSpacing: "0.01em" }}>
+            <span className="text-purple">Schwarzman Scholar</span>
             {". "}
-            <span className="text-blue font-medium">Skoll Fellow</span>
+            <span className="text-blue">Skoll Fellow</span>
             {". "}
-            <span className="text-coral font-medium">Stanford MBA</span>
+            <span className="text-coral">Stanford MBA</span>
             {"."}
           </p>
         </div>

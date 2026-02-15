@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, Playfair_Display } from "next/font/google";
+import { IBM_Plex_Mono, Playfair_Display, Dancing_Script } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -17,6 +17,12 @@ const playfairDisplay = Playfair_Display({
   weight: ["400", "500", "600", "700", "800"],
 });
 
+const dancingScript = Dancing_Script({
+  variable: "--font-dancing-script",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 export const metadata: Metadata = {
   title: "Arinze Obiezue",
   description:
@@ -31,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${ibmPlexMono.variable} ${playfairDisplay.variable} antialiased font-mono`}
+        className={`${ibmPlexMono.variable} ${playfairDisplay.variable} ${dancingScript.variable} antialiased font-mono`}
       >
         <FloatingAdinkra />
         <Navigation />

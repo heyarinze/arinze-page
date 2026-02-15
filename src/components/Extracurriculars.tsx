@@ -68,7 +68,7 @@ export default function Extracurriculars() {
               style={{ transform: "rotate(-0.5deg)" }}
             >
               {/* Engraved role */}
-              <p className="text-[0.6rem] uppercase tracking-[0.2em] text-ink-light/50 mb-2">
+              <p className="text-[0.6rem] uppercase tracking-[0.2em] text-ink mb-2">
                 {item.role}
               </p>
 
