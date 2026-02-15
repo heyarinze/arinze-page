@@ -42,9 +42,9 @@ export default function About() {
           <p className="text-xs tracking-wide text-center md:text-left">
             <span className="text-purple font-medium">Schwarzman Scholar</span>
             {". "}
-            <span className="text-coral font-medium">Skoll Fellow</span>
+            <span className="text-blue font-medium">Skoll Fellow</span>
             {". "}
-            <span className="text-gold font-medium">Stanford MBA</span>
+            <span className="text-coral font-medium">Stanford MBA</span>
             {"."}
           </p>
         </div>
