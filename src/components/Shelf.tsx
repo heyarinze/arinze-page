@@ -1,11 +1,24 @@
 "use client";
 
+import { useEffect } from "react";
 import { SectionHeader } from "./Glyph";
 
 export default function Shelf() {
+  useEffect(() => {
+    // Load RSS widget script
+    const existing = document.querySelector('script[src="https://widget.rss.app/v1/carousel.js"]');
+    if (!existing) {
+      const script = document.createElement("script");
+      script.src = "https://widget.rss.app/v1/carousel.js";
+      script.type = "text/javascript";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
+
   return (
     <section className="max-w-5xl mx-auto px-6">
-      <SectionHeader title="My Shelf" glyph="✦" id="shelf" />
+      <SectionHeader title="My Shelf" glyph="✦" id="shelf" description="What I'm reading, watching, and listening to" />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         {/* Goodreads Widget */}
@@ -144,6 +157,36 @@ export default function Shelf() {
             title="Spotify Playlist"
           />
         </div>
+      </div>
+
+      {/* Recent Watch - RSS Widget */}
+      <div className="mt-10">
+        <h3 className="font-display text-xl font-semibold text-ink mb-4 flex items-center gap-2">
+          <span className="text-gold glyph text-sm">▲</span>
+          Recent Watch
+        </h3>
+        <div
+          className="border border-white/20 rounded-lg p-4 bg-white/30 backdrop-blur-sm"
+          dangerouslySetInnerHTML={{
+            __html: `
+              <style>
+                rssapp-carousel {
+                  --rssapp-bg: transparent !important;
+                  --rssapp-card-bg: rgba(255, 255, 255, 0.35) !important;
+                  --rssapp-card-border: rgba(0, 0, 0, 0.05) !important;
+                  backdrop-filter: blur(8px);
+                }
+                rssapp-carousel .rssapp-card {
+                  background: rgba(255, 255, 255, 0.35) !important;
+                  backdrop-filter: blur(8px) !important;
+                  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+                  border-radius: 8px !important;
+                }
+              </style>
+              <rssapp-carousel id="XFFE5QaR1nHWh78F"></rssapp-carousel>
+            `,
+          }}
+        />
       </div>
     </section>
   );
