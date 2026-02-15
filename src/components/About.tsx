@@ -40,7 +40,7 @@ export default function About() {
             />
           </div>
           <p className="font-cursive text-base font-bold text-ink text-center md:text-left" style={{ letterSpacing: "0.01em" }}>
-            Schwarzman Scholar. Skoll Fellow. Stanford MBA.
+            Creator. Schwarzman Scholar. Skoll Fellow. Stanford MBA.
           </p>
         </div>
 
