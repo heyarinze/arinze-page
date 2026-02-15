@@ -5,7 +5,7 @@ import { SectionHeader } from "./Glyph";
 export default function Newsletter() {
   return (
     <section className="max-w-5xl mx-auto px-6">
-      <SectionHeader title="My Newsletter" glyph="◇" id="newsletter" />
+      <SectionHeader title="My Newsletter" glyph="◇" id="newsletter" description="Subscribe to my Substack to follow my writing" />
 
       <div className="max-w-lg">
         <iframe

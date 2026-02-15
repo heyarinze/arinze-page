@@ -25,7 +25,7 @@ function renderBioText(text: string) {
 export default function About() {
   return (
     <section className="max-w-5xl mx-auto px-6">
-      <SectionHeader title="About" glyph="△" id="about" />
+      <SectionHeader title="About" glyph="△" id="about" description="A cute lil' brief on me and what I care about" />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* Photo with drop shadow */}

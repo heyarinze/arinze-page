@@ -29,10 +29,12 @@ export function SectionHeader({
   title,
   glyph = "◆",
   id,
+  description,
 }: {
   title: string;
   glyph?: string;
   id?: string;
+  description?: string;
 }) {
   return (
     <div id={id} className="mb-10 scroll-mt-24">
@@ -42,7 +44,9 @@ export function SectionHeader({
           {title}
         </h2>
       </div>
-      <div className="stamp text-ink-light w-fit">{title}</div>
+      <div className="stamp text-ink-light w-fit">
+        {description ?? title}
+      </div>
     </div>
   );
 }
