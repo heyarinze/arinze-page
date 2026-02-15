@@ -25,17 +25,17 @@ function renderBioText(text: string) {
 export default function About() {
   return (
     <section className="max-w-5xl mx-auto px-6">
-      <SectionHeader title="About" glyph="△" id="about" description="A cute lil' brief on me and what I care about" />
+      <SectionHeader title="About" glyph="△" id="about" description="A brief on me and what I care about" />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-        {/* Photo with drop shadow */}
+        {/* Photo with transparent background */}
         <div className="md:col-span-1 flex justify-center md:justify-start">
-          <div className="relative w-48 h-48 rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.15)]">
+          <div className="relative w-48 h-64">
             <Image
               src={aboutData.photo}
               alt="Arinze Obiezue"
               fill
-              className="object-cover"
+              className="object-contain"
               sizes="192px"
             />
           </div>

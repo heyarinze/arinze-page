@@ -17,9 +17,9 @@ export default function Home() {
       <SectionDivider />
       <Essays />
       <SectionDivider />
-      <Shelf />
-      <SectionDivider />
       <Newsletter />
+      <SectionDivider />
+      <Shelf />
     </>
   );
 }

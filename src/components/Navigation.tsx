@@ -8,8 +8,8 @@ const links = [
   { label: "About", href: "#about", glyph: "△" },
   { label: "Creations", href: "#work", glyph: "◆" },
   { label: "Thoughts", href: "#thoughts", glyph: "▲" },
-  { label: "Shelf", href: "#shelf", glyph: "✦" },
   { label: "Newsletter", href: "#newsletter", glyph: "◇" },
+  { label: "Shelf", href: "#shelf", glyph: "✦" },
 ];
 
 export default function Navigation() {

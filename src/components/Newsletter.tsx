@@ -7,7 +7,7 @@ export default function Newsletter() {
     <section className="max-w-5xl mx-auto px-6">
       <SectionHeader title="My Newsletter" glyph="◇" id="newsletter" description="Subscribe to my Substack to follow my writing" />
 
-      <div className="max-w-lg">
+      <div className="max-w-lg mx-auto">
         <iframe
           src="https://heyarinze.substack.com/embed"
           width="100%"
