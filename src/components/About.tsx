@@ -29,7 +29,7 @@ export default function About() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* Photo with transparent background */}
-        <div className="md:col-span-1 flex justify-center md:justify-start">
+        <div className="md:col-span-1 flex flex-col items-center md:items-start gap-3">
           <div className="relative w-48 h-64">
             <Image
               src={aboutData.photo}
@@ -39,6 +39,14 @@ export default function About() {
               sizes="192px"
             />
           </div>
+          <p className="text-xs tracking-wide text-center md:text-left">
+            <span className="text-blue font-medium">Schwarzman Scholar</span>
+            {". "}
+            <span className="text-coral font-medium">Skoll Fellow</span>
+            {". "}
+            <span className="text-gold font-medium">Stanford MBA</span>
+            {"."}
+          </p>
         </div>
 
         {/* Bio */}

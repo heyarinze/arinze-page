@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Extracurriculars from "@/components/Extracurriculars";
 import Work from "@/components/Work";
 import Essays from "@/components/Essays";
 import Shelf from "@/components/Shelf";
@@ -12,6 +13,8 @@ export default function Home() {
       <Hero />
       <SectionDivider />
       <About />
+      <SectionDivider />
+      <Extracurriculars />
       <SectionDivider />
       <Work />
       <SectionDivider />
