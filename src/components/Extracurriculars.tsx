@@ -3,7 +3,7 @@ import { SectionHeader } from "./Glyph";
 const extracurriculars = [
   {
     role: "Judge, Anthropic Track",
-    org: "Stanford Treehacks",
+    org: "Stanford TreeHacks",
     orgLink: "https://treehacks.com",
     year: "2026",
   },
@@ -26,7 +26,7 @@ const extracurriculars = [
     year: "2023",
   },
   {
-    role: "Co-Lead, Pride",
+    role: "Co-Lead, Alumni Pride Network",
     org: "Schwarzman Scholars",
     orgLink: "https://www.schwarzmanscholars.org",
     year: "2022",
