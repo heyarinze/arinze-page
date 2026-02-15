@@ -8,7 +8,7 @@ const links = [
   { label: "About", href: "#about", glyph: "△" },
   { label: "Work", href: "#work", glyph: "◆" },
   { label: "Thoughts", href: "#thoughts", glyph: "▲" },
-  { label: "Bookshelf", href: "#shelf", glyph: "✦" },
+  { label: "Shelf", href: "#shelf", glyph: "✦" },
   { label: "Newsletter", href: "#newsletter", glyph: "◇" },
 ];
 

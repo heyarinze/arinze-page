@@ -2,6 +2,26 @@ import Image from "next/image";
 import { SectionHeader } from "./Glyph";
 import aboutData from "@/data/about.json";
 
+function renderBioText(text: string) {
+  // Replace {substack} placeholder with a hyperlink
+  const parts = text.split("{substack}");
+  if (parts.length === 1) return text;
+  return (
+    <>
+      {parts[0]}
+      <a
+        href="https://heyarinze.substack.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-coral hover:underline font-medium"
+      >
+        Substack
+      </a>
+      {parts[1]}
+    </>
+  );
+}
+
 export default function About() {
   return (
     <section className="max-w-5xl mx-auto px-6">
@@ -28,7 +48,7 @@ export default function About() {
               {i === 0 && (
                 <span className="text-coral glyph mr-1 text-xs">❋</span>
               )}
-              {paragraph}
+              {renderBioText(paragraph)}
             </p>
           ))}
 

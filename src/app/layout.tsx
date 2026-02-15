@@ -20,7 +20,7 @@ const playfairDisplay = Playfair_Display({
 export const metadata: Metadata = {
   title: "Arinze Obiezue",
   description:
-    "Building at the intersection of AI, startups, and culture.",
+    "Building within the orbits of AI, education, and media.",
 };
 
 export default function RootLayout({

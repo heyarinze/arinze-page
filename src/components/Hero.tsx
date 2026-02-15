@@ -3,6 +3,7 @@ import { Glyph } from "./Glyph";
 const socials = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/arinzeobiezue" },
   { label: "X", href: "https://www.x.com/heyarinze" },
+  { label: "Instagram", href: "https://www.instagram.com/heyarinze" },
   { label: "TikTok", href: "https://www.tiktok.com/@helloarinze" },
   { label: "Wabi", href: "https://wabi.ai/@heyarinze" },
 ];
@@ -35,10 +36,10 @@ export default function Hero() {
         {/* Tagline */}
         <p className="mt-4 text-sm sm:text-base text-ink-light tracking-wide max-w-lg">
           <span className="text-coral glyph mr-1">▲</span>
-          curious about{" "}
-          <span className="text-blue font-medium">adulting</span>,{" "}
-          <span className="text-coral font-medium">AI</span>, and{" "}
-          <span className="text-gold font-medium">late-stage capitalism</span>
+          building within the orbits of{" "}
+          <span className="text-blue font-medium">AI</span>,{" "}
+          <span className="text-coral font-medium">education</span>, and{" "}
+          <span className="text-gold font-medium">media</span>
         </p>
 
         {/* Social icons */}

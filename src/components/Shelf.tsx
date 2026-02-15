@@ -5,7 +5,7 @@ import { SectionHeader } from "./Glyph";
 export default function Shelf() {
   return (
     <section className="max-w-5xl mx-auto px-6">
-      <SectionHeader title="My Bookshelf" glyph="✦" id="shelf" />
+      <SectionHeader title="My Shelf" glyph="✦" id="shelf" />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         {/* Goodreads Widget */}
