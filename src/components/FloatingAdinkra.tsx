@@ -35,10 +35,10 @@ export default function FloatingAdinkra() {
       id: i,
       symbol: adinkraSymbols[i % adinkraSymbols.length],
       x: Math.random() * 100,
-      size: 14 + Math.random() * 18,
+      size: 22 + Math.random() * 26,
       duration: 18 + Math.random() * 24,
       delay: Math.random() * -30,
-      opacity: 0.04 + Math.random() * 0.06,
+      opacity: 0.06 + Math.random() * 0.08,
     }));
     setSymbols(generated);
   }, []);
