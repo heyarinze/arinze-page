@@ -14,10 +14,22 @@ const extracurriculars = [
     year: "2024",
   },
   {
+    role: "Member, African Narrative Collective",
+    org: "Africa No Filter",
+    orgLink: "https://africanofilter.org",
+    year: "2024",
+  },
+  {
     role: "Advisory Board Member",
     org: "Queer African Network",
     orgLink: "https://www.instagram.com/queerafricannetwork/?hl=en",
     year: "2023",
+  },
+  {
+    role: "Co-Lead, Pride",
+    org: "Schwarzman Scholars",
+    orgLink: "https://www.schwarzmanscholars.org",
+    year: "2022",
   },
   {
     role: "Judge (London)",
@@ -25,22 +37,9 @@ const extracurriculars = [
     orgLink: "https://diana-award.org.uk",
     year: "2021",
   },
-  {
-    role: "Member, African Narrative Collective",
-    org: "Africa No Filter",
-    orgLink: "https://africanofilter.org",
-    year: "2024",
-  },
-  {
-    role: "Co-Lead, Pride",
-    org: "Schwarzman Scholars",
-    orgLink: "https://www.schwarzmanscholars.org",
-    year: null,
-  },
 ];
 
 const accentColors = ["text-coral", "text-blue", "text-gold", "text-coral", "text-blue", "text-gold"];
-const glyphMarkers = ["◇", "✦", "▲", "◎", "❋", "⬡"];
 
 export default function Extracurriculars() {
   return (
@@ -52,34 +51,51 @@ export default function Extracurriculars() {
         description="Side quests I pursued along the way"
       />
 
-      <div className="space-y-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {extracurriculars.map((item, i) => (
-          <div
+          <a
             key={item.org}
-            className="group flex items-start gap-3 p-3 border border-ink/5 bg-cream/50 hover:bg-white/60 transition-all"
+            href={item.orgLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block relative"
           >
-            <span className={`glyph text-xs mt-0.5 opacity-40 group-hover:opacity-100 transition-opacity ${accentColors[i % accentColors.length]}`}>
-              {glyphMarkers[i % glyphMarkers.length]}
-            </span>
-            <div className="flex-1">
-              <p className="text-sm text-ink leading-snug">
-                {item.role} @{" "}
-                <a
-                  href={item.orgLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-coral hover:underline font-medium"
-                >
-                  {item.org}
-                </a>
+            {/* Plaque */}
+            <div
+              className={`border-2 border-ink/10 bg-cream/80 p-5 text-center transition-all
+                group-hover:border-ink/20 group-hover:shadow-[0_2px_12px_rgba(0,0,0,0.06)]
+                relative overflow-hidden`}
+              style={{ transform: "rotate(-0.5deg)" }}
+            >
+              {/* Engraved role */}
+              <p className="text-[0.6rem] uppercase tracking-[0.2em] text-ink-light/50 mb-2">
+                {item.role}
               </p>
+
+              {/* Engraved org name */}
+              <h3
+                className={`font-display text-base font-semibold tracking-tight ${accentColors[i % accentColors.length]} group-hover:opacity-80 transition-opacity`}
+                style={{
+                  textShadow: "0 1px 0 rgba(255,255,255,0.6)",
+                }}
+              >
+                {item.org}
+              </h3>
+
+              {/* Year engraving */}
+              {item.year && (
+                <p className="mt-2 text-[0.55rem] uppercase tracking-[0.25em] text-ink-light/30 font-mono">
+                  — {item.year} —
+                </p>
+              )}
+
+              {/* Subtle corner accents */}
+              <span className="absolute top-1.5 left-1.5 text-[6px] text-ink-light/15 select-none">◆</span>
+              <span className="absolute top-1.5 right-1.5 text-[6px] text-ink-light/15 select-none">◆</span>
+              <span className="absolute bottom-1.5 left-1.5 text-[6px] text-ink-light/15 select-none">◆</span>
+              <span className="absolute bottom-1.5 right-1.5 text-[6px] text-ink-light/15 select-none">◆</span>
             </div>
-            {item.year && (
-              <span className="text-[0.65rem] uppercase tracking-widest text-ink-light/40 shrink-0">
-                {item.year}
-              </span>
-            )}
-          </div>
+          </a>
         ))}
       </div>
     </section>
