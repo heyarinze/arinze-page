@@ -20,17 +20,25 @@ body {
   background-color: var(--color-cream);
   color: var(--color-ink);
   font-family: var(--font-mono);
+}
+
+/* Grid as fixed overlay between floating symbols (z-0) and content (z-10) */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
   background-image:
     linear-gradient(color-mix(in srgb, var(--color-grid) 35%, transparent) 1px, transparent 1px),
     linear-gradient(90deg, color-mix(in srgb, var(--color-grid) 35%, transparent) 1px, transparent 1px);
   background-size: 24px 24px;
   background-position: -1px -1px;
-  background-attachment: fixed;
 }
 
 /* Fade grid on small screens */
 @media (max-width: 640px) {
-  body {
+  body::before {
     background-image:
       linear-gradient(color-mix(in srgb, var(--color-grid) 40%, transparent) 1px, transparent 1px),
       linear-gradient(90deg, color-mix(in srgb, var(--color-grid) 40%, transparent) 1px, transparent 1px);
