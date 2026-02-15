@@ -6,7 +6,7 @@ import { useState } from "react";
 const links = [
   { label: "Home", href: "#home", glyph: "◎" },
   { label: "About", href: "#about", glyph: "△" },
-  { label: "Work", href: "#work", glyph: "◆" },
+  { label: "Creations", href: "#work", glyph: "◆" },
   { label: "Thoughts", href: "#thoughts", glyph: "▲" },
   { label: "Shelf", href: "#shelf", glyph: "✦" },
   { label: "Newsletter", href: "#newsletter", glyph: "◇" },

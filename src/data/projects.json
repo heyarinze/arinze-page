@@ -2,29 +2,51 @@
   {
     "title": "Claude@Stanford",
     "organization": "Co-founder",
-    "dateRange": "Present",
+    "dateRange": "2025 • Active",
     "description": "Building and leading Anthropic's largest community of students building with Claude's suite of AI products.",
     "link": "https://www.claudeatstanford.org"
   },
   {
-    "title": "Non-Disclosure",
-    "organization": "Stanford GSB",
-    "dateRange": "Present",
-    "description": "Leading Stanford GSB's student paper's exploration into new creative and editorial formats as its first creative director.",
+    "title": "DELTA",
+    "organization": "Co-Author",
+    "dateRange": "2025 • Active",
+    "description": "A periodical newsletter I created with one of my best friends as a canvas for our reviews of different tech products we're curious about.",
+    "link": null
+  },
+  {
+    "title": "Sunday High Table — SHiT",
+    "organization": "Founder",
+    "dateRange": "2022 • Hiatus",
+    "description": "An intellectual community of thinkers from all walks of life who met every Sunday in Nairobi to discuss ideas ranging from the multiplicity of truth to the psychology of sexual kinks.",
     "link": null
   },
   {
     "title": "Kenga Media",
     "organization": "Co-Founder & Publisher",
-    "dateRange": "2022 — Present",
+    "dateRange": "2022 • Hiatus",
     "description": "Co-founded a digital and print publication covering Africa's Gen Z culture and insights and ran it for two years as publisher.",
     "link": null
   },
   {
     "title": "EarlyAdmit",
     "organization": "Co-Founder",
-    "dateRange": "Acquired",
+    "dateRange": "2020 • Acquired",
+    "statusColor": "coral",
     "description": "Co-founded a coaching platform helping students from underrepresented minority backgrounds get into top grad programs.",
+    "link": null
+  },
+  {
+    "title": "Designish",
+    "organization": "Co-founder",
+    "dateRange": "2019 • Inactive",
+    "description": "A learning community for Africans and diasporans looking to build careers in UX: product design, content design, and user research.",
+    "link": null
+  },
+  {
+    "title": "PRiDE+",
+    "organization": "Co-founder",
+    "dateRange": "2019 • Active",
+    "description": "The student-run at the African Leadership University creating safe spaces for queer students and allies across both campuses.",
     "link": null
   }
 ]

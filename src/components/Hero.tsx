@@ -38,8 +38,8 @@ export default function Hero() {
           <span className="text-coral glyph mr-1">▲</span>
           building within the orbits of{" "}
           <span className="text-blue font-medium">AI</span>,{" "}
-          <span className="text-coral font-medium">education</span>, and{" "}
-          <span className="text-gold font-medium">media</span>
+          <span className="text-coral font-medium">media</span>, and{" "}
+          <span className="text-gold font-medium">education</span>
         </p>
 
         {/* Social icons */}
