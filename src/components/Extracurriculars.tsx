@@ -29,12 +29,18 @@ const extracurriculars = [
     role: "Member, African Narrative Collective",
     org: "Africa No Filter",
     orgLink: "https://africanofilter.org",
+    year: "2024",
+  },
+  {
+    role: "Co-Lead, Pride",
+    org: "Schwarzman Scholars",
+    orgLink: "https://www.schwarzmanscholars.org",
     year: null,
   },
 ];
 
-const accentColors = ["text-coral", "text-blue", "text-gold", "text-coral", "text-blue"];
-const glyphMarkers = ["◇", "✦", "▲", "◎", "❋"];
+const accentColors = ["text-coral", "text-blue", "text-gold", "text-coral", "text-blue", "text-gold"];
+const glyphMarkers = ["◇", "✦", "▲", "◎", "❋", "⬡"];
 
 export default function Extracurriculars() {
   return (
@@ -43,7 +49,7 @@ export default function Extracurriculars() {
         title="My Extracurriculars"
         glyph="⬡"
         id="extracurriculars"
-        description="Other things I've been a part of"
+        description="Side quests I pursued along the way"
       />
 
       <div className="space-y-3">

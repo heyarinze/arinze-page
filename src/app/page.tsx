@@ -14,9 +14,9 @@ export default function Home() {
       <SectionDivider />
       <About />
       <SectionDivider />
-      <Extracurriculars />
-      <SectionDivider />
       <Work />
+      <SectionDivider />
+      <Extracurriculars />
       <SectionDivider />
       <Essays />
       <SectionDivider />
