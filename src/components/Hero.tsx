@@ -23,8 +23,8 @@ export default function Hero() {
           ⬡
         </span>
 
-        {/* Name */}
-        <h1 className="font-display text-5xl sm:text-7xl font-extrabold tracking-tight text-ink leading-[1.1]">
+        {/* Name — levitating above the rest */}
+        <h1 className="font-display text-5xl sm:text-7xl font-extrabold tracking-tight text-ink leading-[1.1] animate-float">
           Arinze
           <br />
           Obiezue
@@ -34,7 +34,7 @@ export default function Hero() {
         </h1>
 
         {/* Tagline */}
-        <p className="mt-4 text-sm sm:text-base text-ink-light tracking-wide max-w-lg">
+        <p className="mt-6 text-sm sm:text-base text-ink-light tracking-wide max-w-lg">
           <span className="text-coral glyph mr-1">▲</span>
           building within the orbits of{" "}
           <span className="text-blue font-medium">AI</span>,{" "}
@@ -55,6 +55,18 @@ export default function Hero() {
               {s.label} <span className="text-[10px]">→</span>
             </a>
           ))}
+        </div>
+
+        {/* Let's Chat button */}
+        <div className="mt-6">
+          <a
+            href="https://www.bit.ly/arinzechat"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block stamp text-ink hover:text-coral hover:border-coral transition-colors cursor-pointer"
+          >
+            Let&apos;s Chat ↗
+          </a>
         </div>
 
         {/* Intro paragraph */}
