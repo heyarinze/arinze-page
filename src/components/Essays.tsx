@@ -20,37 +20,37 @@ export default function Essays() {
               hover:shadow-[0_2px_8px_rgba(0,0,0,0.06)]"
             style={{
               transform: `rotate(${i % 2 === 0 ? "-0.4" : "0.3"}deg)`,
-              borderImage: "repeating-linear-gradient(0deg, var(--color-ink) 0px, var(--color-ink) 4px, transparent 4px, transparent 8px) 8",
-              borderWidth: "2px",
+              borderImage: "repeating-linear-gradient(0deg, var(--color-ink) 0px, var(--color-ink) 3px, transparent 3px, transparent 7px) 7",
+              borderWidth: "1px",
               borderStyle: "solid",
             }}
           >
             {/* Torn edge texture — top */}
             <div
-              className="pointer-events-none absolute -top-[1px] left-2 right-2 h-[3px]"
+              className="pointer-events-none absolute -top-[1px] left-2 right-2 h-[2px]"
               style={{
-                background: "repeating-linear-gradient(90deg, var(--color-cream) 0px, var(--color-cream) 3px, transparent 3px, transparent 7px)",
+                background: "repeating-linear-gradient(90deg, var(--color-cream) 0px, var(--color-cream) 2px, transparent 2px, transparent 6px)",
               }}
             />
             {/* Torn edge texture — bottom */}
             <div
-              className="pointer-events-none absolute -bottom-[1px] left-2 right-2 h-[3px]"
+              className="pointer-events-none absolute -bottom-[1px] left-2 right-2 h-[2px]"
               style={{
-                background: "repeating-linear-gradient(90deg, var(--color-cream) 0px, var(--color-cream) 4px, transparent 4px, transparent 8px)",
+                background: "repeating-linear-gradient(90deg, var(--color-cream) 0px, var(--color-cream) 3px, transparent 3px, transparent 7px)",
               }}
             />
             {/* Torn edge texture — left */}
             <div
-              className="pointer-events-none absolute top-2 bottom-2 -left-[1px] w-[3px]"
+              className="pointer-events-none absolute top-2 bottom-2 -left-[1px] w-[2px]"
               style={{
-                background: "repeating-linear-gradient(0deg, var(--color-cream) 0px, var(--color-cream) 3px, transparent 3px, transparent 7px)",
+                background: "repeating-linear-gradient(0deg, var(--color-cream) 0px, var(--color-cream) 2px, transparent 2px, transparent 6px)",
               }}
             />
             {/* Torn edge texture — right */}
             <div
-              className="pointer-events-none absolute top-2 bottom-2 -right-[1px] w-[3px]"
+              className="pointer-events-none absolute top-2 bottom-2 -right-[1px] w-[2px]"
               style={{
-                background: "repeating-linear-gradient(0deg, var(--color-cream) 0px, var(--color-cream) 4px, transparent 4px, transparent 8px)",
+                background: "repeating-linear-gradient(0deg, var(--color-cream) 0px, var(--color-cream) 3px, transparent 3px, transparent 7px)",
               }}
             />
 
