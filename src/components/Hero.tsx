@@ -17,31 +17,31 @@ const orbitWords = [
   { text: "education", color: "text-gold" },
 ];
 
-function RotatingWord() {
+function FlashingWords() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setVisible(false);
-      setTimeout(() => {
-        setActiveIndex((prev) => (prev + 1) % orbitWords.length);
-        setVisible(true);
-      }, 200);
-    }, 1400);
+      setActiveIndex((prev) => (prev + 1) % orbitWords.length);
+    }, 600);
     return () => clearInterval(interval);
   }, []);
 
-  const word = orbitWords[activeIndex];
-
   return (
-    <span
-      className={`${word.color} font-bold transition-opacity duration-200 ${
-        visible ? "opacity-100" : "opacity-0"
-      }`}
-    >
-      {word.text}
-    </span>
+    <>
+      {orbitWords.map((word, i) => (
+        <span key={word.text}>
+          {i > 0 && (i === orbitWords.length - 1 ? ", and " : ", ")}
+          <span
+            className={`font-bold transition-colors duration-200 ${
+              i === activeIndex ? word.color : "text-ink"
+            }`}
+          >
+            {word.text}
+          </span>
+        </span>
+      ))}
+    </>
   );
 }
 
@@ -74,7 +74,7 @@ export default function Hero() {
         <p className="mt-6 text-sm sm:text-base text-ink-light tracking-wide max-w-lg">
           <span className="text-coral glyph mr-1">▲</span>
           building within the orbits of{" "}
-          <RotatingWord />
+          <FlashingWords />
         </p>
 
         {/* Social icons */}
