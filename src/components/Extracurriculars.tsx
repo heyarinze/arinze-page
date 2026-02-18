@@ -28,6 +28,12 @@ const extracurriculars: Extracurricular[] = [
     year: "2024",
   },
   {
+    role: "Advisory Board Member",
+    org: "Queer African Network",
+    orgLink: "https://www.instagram.com/queerafricannetwork/?hl=en",
+    year: "2023",
+  },
+  {
     role: "Co-Lead, Alumni Pride Network",
     org: "Schwarzman Scholars",
     orgLink: "https://www.schwarzmanscholars.org",
@@ -41,7 +47,7 @@ const extracurriculars: Extracurricular[] = [
   },
 ];
 
-const accentColors = ["text-coral", "text-blue", "text-gold", "text-coral", "text-blue"];
+const accentColors = ["text-coral", "text-blue", "text-gold", "text-coral", "text-blue", "text-gold"];
 
 export default function Extracurriculars() {
   return (
