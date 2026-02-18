@@ -91,11 +91,11 @@ export default function Timeline() {
               onMouseEnter={() => setHoveredIndex(i)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              {/* Tack pin */}
-              <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 z-20">
-                <div className="w-3 h-3 rounded-full bg-coral/70 border border-coral/40 shadow-[0_1px_3px_rgba(0,0,0,0.15)]" />
-                <div className="w-px h-2 bg-ink/20 mx-auto" />
-              </div>
+              {/* Tape strip */}
+              <div
+                className="absolute -top-1.5 left-1/2 z-20 w-8 h-3 bg-cream/60 border-y border-ink/[0.06] shadow-[0_0.5px_2px_rgba(0,0,0,0.04)]"
+                style={{ transform: `translateX(-50%) rotate(${i % 2 === 0 ? 2 : -2}deg)`, backdropFilter: "blur(2px)" }}
+              />
 
               {/* Postcard */}
               <div
