@@ -172,8 +172,8 @@ export default function Timeline() {
         </div>
 
         {/* Swipe hint on mobile */}
-        <p className="sm:hidden text-center text-[0.55rem] uppercase tracking-[0.2em] text-ink-light/30 font-mono mt-3">
-          swipe →
+        <p className="sm:hidden text-center text-[0.55rem] uppercase tracking-[0.2em] text-coral/60 font-mono mt-6">
+          ← swipe →
         </p>
       </div>
     </section>
