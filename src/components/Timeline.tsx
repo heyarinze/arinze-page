@@ -70,7 +70,7 @@ export default function Timeline() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="max-w-5xl mx-auto px-6">
+    <section className="max-w-6xl mx-auto px-6">
       <SectionHeader
         title="My Homes"
         glyph="◎"
@@ -81,7 +81,7 @@ export default function Timeline() {
       <div className="relative">
         {/* Horizontal dashed livewire */}
         <div
-          className="absolute top-[14px] left-0 right-0 h-px hidden sm:block"
+          className="absolute top-[18px] left-0 right-0 h-px hidden sm:block"
           style={{
             background: "repeating-linear-gradient(90deg, var(--color-ink) 0px, var(--color-ink) 6px, transparent 6px, transparent 12px)",
             opacity: 0.12,
@@ -89,7 +89,7 @@ export default function Timeline() {
         />
 
         {/* Postcard carousel — scrollable on mobile, justified on desktop */}
-        <div className="flex sm:justify-between overflow-x-auto gap-4 sm:gap-0 px-2 sm:px-0 -mx-2 sm:mx-0 snap-x snap-mandatory scrollbar-hide pb-2"
+        <div className="flex sm:justify-between overflow-x-auto gap-6 sm:gap-3 px-3 sm:px-0 -mx-3 sm:mx-0 snap-x snap-mandatory scrollbar-hide pb-2"
           style={{ WebkitOverflowScrolling: "touch", scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {places.map((place, i) => {
@@ -103,8 +103,8 @@ export default function Timeline() {
                 onMouseLeave={() => setHoveredIndex(null)}
               >
                 {/* Dot on the wire + compass ring on hover */}
-                <div className={`relative z-10 flex items-center justify-center transition-all duration-300 ease-out mb-3 ${
-                  isHovered ? "w-14 h-14" : "w-7 h-7"
+                <div className={`relative z-10 flex items-center justify-center transition-all duration-300 ease-out mb-4 ${
+                  isHovered ? "w-16 h-16" : "w-9 h-9"
                 }`}>
                   {isHovered && <CompassRing />}
                   <div
@@ -112,20 +112,20 @@ export default function Timeline() {
                       place.isCurrent
                         ? "border-ink/40 bg-ink/30"
                         : "border-ink/20 bg-cream"
-                    } ${isHovered ? "w-[11px] h-[11px] border-ink/40" : "w-[7px] h-[7px]"}`}
+                    } ${isHovered ? "w-[13px] h-[13px] border-ink/40" : "w-[9px] h-[9px]"}`}
                   />
                 </div>
 
                 {/* Tape strip */}
                 <div className="relative">
                   <div
-                    className="absolute -top-1.5 left-1/2 z-20 w-8 h-3 bg-cream/60 border-y border-ink/[0.06] shadow-[0_0.5px_2px_rgba(0,0,0,0.04)]"
+                    className="absolute -top-2 left-1/2 z-20 w-12 h-4 bg-cream/60 border-y border-ink/[0.06] shadow-[0_0.5px_2px_rgba(0,0,0,0.04)]"
                     style={{ transform: `translateX(-50%) rotate(${i % 2 === 0 ? 2 : -2}deg)`, backdropFilter: "blur(2px)" }}
                   />
 
                   {/* Postcard */}
                   <div
-                    className={`relative w-[7rem] sm:w-[7.5rem] pt-4 pb-3 px-3 text-center transition-all duration-300
+                    className={`relative w-[10.5rem] sm:w-[11rem] pt-6 pb-4 px-5 text-center transition-all duration-300
                       bg-white/[0.35] backdrop-blur-[6px]
                       border border-white/50
                       shadow-[0_1px_8px_rgba(0,0,0,0.04),inset_0_1px_0_rgba(255,255,255,0.5)]
@@ -136,7 +136,7 @@ export default function Timeline() {
                     style={{ transform: `rotate(${place.rotation})${isHovered ? " scale(1.05)" : ""}` }}
                   >
                     {/* City name */}
-                    <p className={`text-sm font-display tracking-tight leading-tight transition-colors duration-200 relative z-10 ${
+                    <p className={`text-base font-display tracking-tight leading-tight transition-colors duration-200 relative z-10 ${
                       place.isCurrent ? "font-semibold text-ink" : isHovered ? "text-ink font-medium" : "text-ink-light"
                     }`}>
                       {place.city}
@@ -144,17 +144,17 @@ export default function Timeline() {
                     </p>
 
                     {/* Country */}
-                    <p className={`text-[0.6rem] uppercase tracking-[0.15em] font-mono mt-1 transition-colors duration-200 ${
+                    <p className={`text-[0.75rem] uppercase tracking-[0.15em] font-mono mt-1.5 transition-colors duration-200 ${
                       isHovered ? "text-ink-light/60" : "text-ink-light/40"
                     }`}>
                       {place.country}
                     </p>
 
                     {/* Divider line */}
-                    <div className="w-6 h-px bg-ink/[0.08] mx-auto my-1.5" />
+                    <div className="w-8 h-px bg-ink/[0.08] mx-auto my-2" />
 
                     {/* Years */}
-                    <p className={`text-[0.55rem] uppercase tracking-[0.2em] font-mono transition-colors duration-200 ${
+                    <p className={`text-[0.7rem] uppercase tracking-[0.2em] font-mono transition-colors duration-200 ${
                       isHovered ? "text-ink" : "text-ink/60"
                     }`}>
                       {place.years}

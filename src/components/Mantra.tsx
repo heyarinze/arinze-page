@@ -7,7 +7,9 @@ export default function Mantra() {
           fontStyle: "italic",
         }}
       >
+        <span className="inline-block text-ink/20 text-2xl sm:text-4xl lg:text-5xl align-middle mr-3 sm:mr-4">&#10038;</span>
         esse quam videri
+        <span className="inline-block text-ink/20 text-2xl sm:text-4xl lg:text-5xl align-middle ml-3 sm:ml-4">&#10038;</span>
       </p>
       <p className="mt-4 text-[0.6rem] uppercase tracking-[0.3em] text-ink-light/40 font-mono">
         — to be, rather than to seem —
