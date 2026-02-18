@@ -136,7 +136,7 @@ export default function Timeline() {
 
                 {/* Years */}
                 <p className={`text-[0.55rem] uppercase tracking-[0.2em] font-mono transition-colors duration-200 ${
-                  isHovered ? "text-ink-light/40" : "text-ink-light/25"
+                  isHovered ? "text-gold/70" : "text-gold/40"
                 }`}>
                   {place.years}
                 </p>
