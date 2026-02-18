@@ -77,79 +77,99 @@ export default function Timeline() {
         description="The places that raised me"
       />
 
-      {/* Postcard carousel — scrollable on mobile, wrapped on desktop */}
-      <div className="flex sm:flex-wrap sm:justify-center overflow-x-auto gap-4 sm:gap-5 px-2 sm:px-0 -mx-2 sm:mx-0 snap-x snap-mandatory scrollbar-hide pb-2"
-        style={{ WebkitOverflowScrolling: "touch", scrollbarWidth: "none", msOverflowStyle: "none" }}
-      >
-        {places.map((place, i) => {
-          const isHovered = hoveredIndex === i;
+      <div className="relative">
+        {/* Horizontal dashed livewire */}
+        <div
+          className="absolute top-[14px] left-0 right-0 h-px hidden sm:block"
+          style={{
+            background: "repeating-linear-gradient(90deg, var(--color-ink) 0px, var(--color-ink) 6px, transparent 6px, transparent 12px)",
+            opacity: 0.12,
+          }}
+        />
 
-          return (
-            <div
-              key={place.city}
-              className="shrink-0 sm:shrink relative cursor-default snap-center"
-              onMouseEnter={() => setHoveredIndex(i)}
-              onMouseLeave={() => setHoveredIndex(null)}
-            >
-              {/* Tape strip */}
-              <div
-                className="absolute -top-1.5 left-1/2 z-20 w-8 h-3 bg-cream/60 border-y border-ink/[0.06] shadow-[0_0.5px_2px_rgba(0,0,0,0.04)]"
-                style={{ transform: `translateX(-50%) rotate(${i % 2 === 0 ? 2 : -2}deg)`, backdropFilter: "blur(2px)" }}
-              />
+        {/* Postcard carousel — scrollable on mobile, justified on desktop */}
+        <div className="flex sm:justify-between overflow-x-auto gap-4 sm:gap-0 px-2 sm:px-0 -mx-2 sm:mx-0 snap-x snap-mandatory scrollbar-hide pb-2"
+          style={{ WebkitOverflowScrolling: "touch", scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
+          {places.map((place, i) => {
+            const isHovered = hoveredIndex === i;
 
-              {/* Postcard */}
+            return (
               <div
-                className={`relative w-[7rem] sm:w-[7.5rem] pt-4 pb-3 px-3 text-center transition-all duration-300
-                  bg-white/[0.35] backdrop-blur-[6px]
-                  border border-white/50
-                  shadow-[0_1px_8px_rgba(0,0,0,0.04),inset_0_1px_0_rgba(255,255,255,0.5)]
-                  ${isHovered
-                    ? "shadow-[0_4px_16px_rgba(0,0,0,0.08),inset_0_1px_0_rgba(255,255,255,0.6)] scale-105"
-                    : ""
-                  }`}
-                style={{ transform: `rotate(${place.rotation})${isHovered ? " scale(1.05)" : ""}` }}
+                key={place.city}
+                className="flex flex-col items-center shrink-0 sm:shrink sm:flex-1 sm:min-w-0 relative cursor-default snap-center"
+                onMouseEnter={() => setHoveredIndex(i)}
+                onMouseLeave={() => setHoveredIndex(null)}
               >
-                {/* Compass ring on hover */}
-                {isHovered && (
-                  <div className="absolute top-3 left-1/2 -translate-x-1/2 w-10 h-10 opacity-30">
-                    <CompassRing />
+                {/* Dot on the wire + compass ring on hover */}
+                <div className={`relative z-10 flex items-center justify-center transition-all duration-300 ease-out mb-3 ${
+                  isHovered ? "w-14 h-14" : "w-7 h-7"
+                }`}>
+                  {isHovered && <CompassRing />}
+                  <div
+                    className={`rounded-full border-[1.5px] transition-all duration-300 ${
+                      place.isCurrent
+                        ? "border-ink/40 bg-ink/30"
+                        : "border-ink/20 bg-cream"
+                    } ${isHovered ? "w-[11px] h-[11px] border-ink/40" : "w-[7px] h-[7px]"}`}
+                  />
+                </div>
+
+                {/* Tape strip */}
+                <div className="relative">
+                  <div
+                    className="absolute -top-1.5 left-1/2 z-20 w-8 h-3 bg-cream/60 border-y border-ink/[0.06] shadow-[0_0.5px_2px_rgba(0,0,0,0.04)]"
+                    style={{ transform: `translateX(-50%) rotate(${i % 2 === 0 ? 2 : -2}deg)`, backdropFilter: "blur(2px)" }}
+                  />
+
+                  {/* Postcard */}
+                  <div
+                    className={`relative w-[7rem] sm:w-[7.5rem] pt-4 pb-3 px-3 text-center transition-all duration-300
+                      bg-white/[0.35] backdrop-blur-[6px]
+                      border border-white/50
+                      shadow-[0_1px_8px_rgba(0,0,0,0.04),inset_0_1px_0_rgba(255,255,255,0.5)]
+                      ${isHovered
+                        ? "shadow-[0_4px_16px_rgba(0,0,0,0.08),inset_0_1px_0_rgba(255,255,255,0.6)]"
+                        : ""
+                      }`}
+                    style={{ transform: `rotate(${place.rotation})${isHovered ? " scale(1.05)" : ""}` }}
+                  >
+                    {/* City name */}
+                    <p className={`text-sm font-display tracking-tight leading-tight transition-colors duration-200 relative z-10 ${
+                      place.isCurrent ? "font-semibold text-ink" : isHovered ? "text-ink font-medium" : "text-ink-light"
+                    }`}>
+                      {place.city}
+                      {place.isCurrent && <StanfordTree />}
+                    </p>
+
+                    {/* Country */}
+                    <p className={`text-[0.6rem] uppercase tracking-[0.15em] font-mono mt-1 transition-colors duration-200 ${
+                      isHovered ? "text-ink-light/60" : "text-ink-light/40"
+                    }`}>
+                      {place.country}
+                    </p>
+
+                    {/* Divider line */}
+                    <div className="w-6 h-px bg-ink/[0.08] mx-auto my-1.5" />
+
+                    {/* Years */}
+                    <p className={`text-[0.55rem] uppercase tracking-[0.2em] font-mono transition-colors duration-200 ${
+                      isHovered ? "text-ink" : "text-ink/60"
+                    }`}>
+                      {place.years}
+                    </p>
                   </div>
-                )}
-
-                {/* City name */}
-                <p className={`text-sm font-display tracking-tight leading-tight transition-colors duration-200 relative z-10 ${
-                  place.isCurrent ? "font-semibold text-ink" : isHovered ? "text-ink font-medium" : "text-ink-light"
-                }`}>
-                  {place.city}
-                  {place.isCurrent && <StanfordTree />}
-                </p>
-
-                {/* Country */}
-                <p className={`text-[0.6rem] uppercase tracking-[0.15em] font-mono mt-1 transition-colors duration-200 ${
-                  isHovered ? "text-ink-light/60" : "text-ink-light/40"
-                }`}>
-                  {place.country}
-                </p>
-
-                {/* Divider line */}
-                <div className="w-6 h-px bg-ink/[0.08] mx-auto my-1.5" />
-
-                {/* Years */}
-                <p className={`text-[0.55rem] uppercase tracking-[0.2em] font-mono transition-colors duration-200 ${
-                  isHovered ? "text-ink" : "text-ink/60"
-                }`}>
-                  {place.years}
-                </p>
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
 
-      {/* Swipe hint on mobile */}
-      <p className="sm:hidden text-center text-[0.55rem] uppercase tracking-[0.2em] text-coral/60 font-mono mt-6">
-        ← swipe →
-      </p>
+        {/* Swipe hint on mobile */}
+        <p className="sm:hidden text-center text-[0.55rem] uppercase tracking-[0.2em] text-coral/60 font-mono mt-6">
+          ← swipe →
+        </p>
+      </div>
     </section>
   );
 }
