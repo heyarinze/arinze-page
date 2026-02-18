@@ -12,7 +12,7 @@ export default function Newsletter() {
           src="https://heyarinze.substack.com/embed"
           width="100%"
           height="320"
-          className="border border-ink/10 bg-white rounded-sm"
+          className="border border-white/10 bg-white/5 backdrop-blur-sm rounded-sm"
           frameBorder="0"
           scrolling="no"
           title="Subscribe to Arinze's Notes"

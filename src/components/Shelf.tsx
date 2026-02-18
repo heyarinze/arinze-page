@@ -28,7 +28,7 @@ export default function Shelf() {
             Recent Reads
           </h3>
           <div
-            className="border border-ink/10 rounded-sm p-4 bg-white/50"
+            className="border border-white/10 rounded-sm p-4 bg-white/5 backdrop-blur-sm"
             dangerouslySetInnerHTML={{
               __html: `
                 <style>
@@ -36,7 +36,7 @@ export default function Shelf() {
                     border: none;
                     padding: 0;
                     background-color: transparent;
-                    color: #1a1a1a;
+                    color: #e8e8e8;
                     width: 100%;
                   }
                   .gr_custom_header_1771065670 {
@@ -48,7 +48,7 @@ export default function Shelf() {
                     margin-bottom: 10px;
                     overflow: auto;
                     padding-bottom: 8px;
-                    border-bottom: 1px solid #eee;
+                    border-bottom: 1px solid rgba(255,255,255,0.1);
                   }
                   .gr_custom_book_container_1771065670 {
                     overflow: hidden;
@@ -59,22 +59,22 @@ export default function Shelf() {
                   }
                   .gr_custom_author_1771065670 {
                     font-size: 11px;
-                    color: #4a4a4a;
+                    color: #a0a0a0;
                   }
                   .gr_custom_tags_1771065670 {
                     font-size: 10px;
-                    color: gray;
+                    color: #888;
                   }
                   .gr_custom_title_1771065670 a {
                     font-size: 13px;
-                    color: #1a1a1a;
+                    color: #e8e8e8;
                     text-decoration: none;
                   }
                   .gr_custom_title_1771065670 a:hover {
-                    color: #E8573A;
+                    color: #FF6B4F;
                   }
                   .gr_custom_author_1771065670 a {
-                    color: #4a4a4a;
+                    color: #a0a0a0;
                     text-decoration: none;
                   }
                   .gr_custom_rating_1771065670 {
@@ -166,20 +166,20 @@ export default function Shelf() {
           Recent Watch
         </h3>
         <div
-          className="border border-white/20 rounded-lg p-4 bg-white/30 backdrop-blur-sm"
+          className="border border-white/10 rounded-lg p-4 bg-white/5 backdrop-blur-md"
           dangerouslySetInnerHTML={{
             __html: `
               <style>
                 rssapp-carousel {
                   --rssapp-bg: transparent !important;
-                  --rssapp-card-bg: rgba(255, 255, 255, 0.35) !important;
-                  --rssapp-card-border: rgba(0, 0, 0, 0.05) !important;
+                  --rssapp-card-bg: rgba(255, 255, 255, 0.05) !important;
+                  --rssapp-card-border: rgba(255, 255, 255, 0.1) !important;
                   backdrop-filter: blur(8px);
                 }
                 rssapp-carousel .rssapp-card {
-                  background: rgba(255, 255, 255, 0.35) !important;
+                  background: rgba(255, 255, 255, 0.05) !important;
                   backdrop-filter: blur(8px) !important;
-                  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+                  border: 1px solid rgba(255, 255, 255, 0.1) !important;
                   border-radius: 8px !important;
                 }
               </style>

@@ -17,7 +17,7 @@ export default function Navigation() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-cream/80 backdrop-blur-sm border-b border-ink/5">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/5 backdrop-blur-md border-b border-white/10">
       <div className="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between">
         <a
           href="#home"
@@ -60,7 +60,7 @@ export default function Navigation() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="sm:hidden bg-cream/95 backdrop-blur-sm border-b border-ink/5 px-6 pb-4">
+        <div className="sm:hidden bg-white/5 backdrop-blur-md border-b border-white/10 px-6 pb-4">
           {links.map((link) => (
             <a
               key={link.href}

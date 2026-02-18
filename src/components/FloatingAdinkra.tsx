@@ -58,7 +58,7 @@ export default function FloatingAdinkra() {
             animationDuration: `${s.duration}s`,
             animationDelay: `${s.delay}s`,
             color: "var(--color-ink)",
-            textShadow: "0 0 8px rgba(255,255,255,0.3)",
+            textShadow: "0 0 8px rgba(255,255,255,0.05)",
             filter: "blur(0.3px)",
           }}
           aria-hidden="true"

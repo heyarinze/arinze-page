@@ -33,7 +33,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-ink/10 mt-24">
+    <footer className="border-t border-white/10 mt-24">
       <div className="max-w-5xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-xs text-ink-light tracking-wide">
           <span className="glyph text-coral mr-1">◇</span>
