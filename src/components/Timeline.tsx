@@ -116,15 +116,17 @@ export default function Timeline() {
           }}
         />
 
-        {/* Places along the wire */}
-        <div className="flex items-start justify-between overflow-x-auto gap-0">
+        {/* Places along the wire — scrollable carousel on mobile, justified on desktop */}
+        <div className="flex items-start sm:justify-between overflow-x-auto gap-6 sm:gap-0 px-2 sm:px-0 -mx-2 sm:mx-0 snap-x snap-mandatory scrollbar-hide"
+          style={{ WebkitOverflowScrolling: "touch", scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
           {places.map((place, i) => {
             const isHovered = hoveredIndex === i;
 
             return (
               <div
                 key={place.city}
-                className="flex flex-col items-center flex-1 min-w-0 relative cursor-default"
+                className="flex flex-col items-center shrink-0 sm:shrink sm:flex-1 min-w-[5.5rem] sm:min-w-0 relative cursor-default snap-center"
                 onMouseEnter={() => setHoveredIndex(i)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
@@ -147,18 +149,18 @@ export default function Timeline() {
                 <div className={`mt-2 text-center px-1 transition-all duration-300 ${
                   isHovered ? "transform scale-105" : ""
                 }`}>
-                  <p className={`text-xs sm:text-sm font-display tracking-tight leading-tight transition-colors duration-200 ${
+                  <p className={`text-sm font-display tracking-tight leading-tight transition-colors duration-200 ${
                     place.isCurrent ? "font-semibold text-ink" : isHovered ? "text-ink font-medium" : "text-ink-light"
                   }`}>
                     {place.city}
                     {place.isCurrent && <StanfordTree />}
                   </p>
-                  <p className={`text-[0.55rem] sm:text-[0.65rem] uppercase tracking-[0.15em] font-mono mt-0.5 transition-colors duration-200 ${
+                  <p className={`text-[0.6rem] sm:text-[0.65rem] uppercase tracking-[0.15em] font-mono mt-0.5 transition-colors duration-200 ${
                     isHovered ? "text-ink-light/60" : "text-ink-light/40"
                   }`}>
                     {place.country}
                   </p>
-                  <p className={`text-[0.5rem] sm:text-[0.6rem] uppercase tracking-[0.2em] font-mono mt-0.5 transition-colors duration-200 ${
+                  <p className={`text-[0.55rem] sm:text-[0.6rem] uppercase tracking-[0.2em] font-mono mt-0.5 transition-colors duration-200 ${
                     isHovered ? "text-ink-light/40" : "text-ink-light/25"
                   }`}>
                     {place.years}
@@ -168,6 +170,11 @@ export default function Timeline() {
             );
           })}
         </div>
+
+        {/* Swipe hint on mobile */}
+        <p className="sm:hidden text-center text-[0.55rem] uppercase tracking-[0.2em] text-ink-light/30 font-mono mt-3">
+          swipe →
+        </p>
       </div>
     </section>
   );

@@ -136,6 +136,11 @@ a.accent-link:hover {
   color: var(--color-coral);
 }
 
+/* ── Hide scrollbar utility ───────────────────────────────── */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 /* ── Floating animation for glassmorphism photo ────────────── */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }

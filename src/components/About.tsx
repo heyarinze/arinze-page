@@ -98,9 +98,10 @@ function CollapsibleBulletList({ text }: { text: string }) {
         </div>
         <button
           onClick={() => setExpanded(!expanded)}
-          className="mt-2 text-[0.65rem] uppercase tracking-[0.15em] text-ink-light/50 hover:text-coral transition-colors cursor-pointer font-mono"
+          className="mt-2 text-[0.65rem] uppercase tracking-[0.15em] text-ink-light hover:text-coral transition-colors cursor-pointer font-mono flex items-center gap-1.5"
         >
-          {expanded ? "— show less" : "— show more"}
+          <span className={`inline-block transition-transform duration-300 ${expanded ? "rotate-90" : "rotate-0"}`}>▸</span>
+          {expanded ? "show less" : "show more"}
         </button>
       </div>
     </>
