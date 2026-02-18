@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 import { SectionHeader } from "./Glyph";
 import aboutData from "@/data/about.json";
@@ -51,22 +53,56 @@ function isBulletList(text: string) {
   return text.includes("\n•");
 }
 
-function renderBulletList(text: string) {
+function CollapsibleBulletList({ text }: { text: string }) {
+  const [expanded, setExpanded] = useState(false);
   const lines = text.split("\n");
   const intro = lines[0]; // "In the past:"
   const bullets = lines.slice(1).filter((l) => l.startsWith("•"));
+  const peekBullet = bullets[0];
+  const hiddenBullets = bullets.slice(1);
 
   return (
     <>
       <span>{intro}</span>
       <ul className="mt-2 space-y-1.5 list-none pl-0">
-        {bullets.map((bullet, i) => (
-          <li key={i} className="flex items-start gap-2 text-sm leading-relaxed text-ink-light">
-            <span className="text-coral text-xs mt-0.5 shrink-0">•</span>
-            <span>{renderInlineLinks(bullet.replace(/^•\s*/, ""))}</span>
-          </li>
-        ))}
+        {/* First bullet always visible as a peek */}
+        <li className="flex items-start gap-2 text-sm leading-relaxed text-ink-light">
+          <span className="text-coral text-xs mt-0.5 shrink-0">•</span>
+          <span>{renderInlineLinks(peekBullet.replace(/^•\s*/, ""))}</span>
+        </li>
       </ul>
+
+      {/* Collapsible section */}
+      <div className="relative">
+        {!expanded && (
+          <div
+            className="absolute bottom-0 left-0 right-0 h-8 pointer-events-none"
+            style={{
+              background: "linear-gradient(to bottom, transparent, var(--color-cream))",
+            }}
+          />
+        )}
+        <div
+          className={`overflow-hidden transition-all duration-500 ease-in-out ${
+            expanded ? "max-h-[500px] opacity-100" : "max-h-[1.5rem] opacity-40"
+          }`}
+        >
+          <ul className="space-y-1.5 list-none pl-0">
+            {hiddenBullets.map((bullet, i) => (
+              <li key={i} className="flex items-start gap-2 text-sm leading-relaxed text-ink-light">
+                <span className="text-coral text-xs mt-0.5 shrink-0">•</span>
+                <span>{renderInlineLinks(bullet.replace(/^•\s*/, ""))}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <button
+          onClick={() => setExpanded(!expanded)}
+          className="mt-2 text-[0.65rem] uppercase tracking-[0.15em] text-ink-light/50 hover:text-coral transition-colors cursor-pointer font-mono"
+        >
+          {expanded ? "— show less" : "— show more"}
+        </button>
+      </div>
     </>
   );
 }
@@ -101,7 +137,7 @@ export default function About() {
                 <span className="text-coral glyph mr-1 text-xs">❋</span>
               )}
               {isBulletList(paragraph)
-                ? renderBulletList(paragraph)
+                ? <CollapsibleBulletList text={paragraph} />
                 : renderBioText(paragraph)}
             </div>
           ))}
