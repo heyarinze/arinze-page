@@ -6,10 +6,11 @@ import { SectionHeader } from "./Glyph";
 const places = [
   { city: "Aba", country: "Nigeria", years: "1998–2015", rotation: "-1.5deg" },
   { city: "Grand Baie", country: "Mauritius", years: "2016–2020", rotation: "1deg" },
+  { city: "Enugu", country: "Nigeria", years: "2020–2020", rotation: "0.8deg" },
   { city: "London", country: "UK", years: "2020–2021", rotation: "-0.5deg" },
   { city: "Accra", country: "Ghana", years: "2021–2022", rotation: "1.5deg" },
   { city: "Nairobi", country: "Kenya", years: "2022–2024", rotation: "-1deg" },
-  { city: "Lagos + Enugu", country: "Nigeria", years: "2024", rotation: "0.5deg" },
+  { city: "Lagos", country: "Nigeria", years: "2024", rotation: "0.5deg" },
   { city: "Stanford", country: "USA", years: "2024–present", isCurrent: true, rotation: "-0.8deg" },
 ];
 

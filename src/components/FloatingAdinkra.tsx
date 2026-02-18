@@ -31,7 +31,7 @@ export default function FloatingAdinkra() {
   const [symbols, setSymbols] = useState<FloatingSymbol[]>([]);
 
   useEffect(() => {
-    const generated: FloatingSymbol[] = Array.from({ length: 12 }, (_, i) => ({
+    const generated: FloatingSymbol[] = Array.from({ length: 24 }, (_, i) => ({
       id: i,
       symbol: adinkraSymbols[i % adinkraSymbols.length],
       x: Math.random() * 100,
