@@ -4,42 +4,13 @@ import { useState } from "react";
 import { SectionHeader } from "./Glyph";
 
 const places = [
-  {
-    city: "Aba",
-    country: "Nigeria",
-    years: "1998–2015",
-  },
-  {
-    city: "Grand Baie",
-    country: "Mauritius",
-    years: "2016–2020",
-  },
-  {
-    city: "London",
-    country: "UK",
-    years: "2020–2021",
-  },
-  {
-    city: "Accra",
-    country: "Ghana",
-    years: "2021–2022",
-  },
-  {
-    city: "Nairobi",
-    country: "Kenya",
-    years: "2022–2024",
-  },
-  {
-    city: "Lagos + Enugu",
-    country: "Nigeria",
-    years: "2024",
-  },
-  {
-    city: "Stanford",
-    country: "USA",
-    years: "2024–present",
-    isCurrent: true,
-  },
+  { city: "Aba", country: "Nigeria", years: "1998–2015", rotation: "-1.5deg" },
+  { city: "Grand Baie", country: "Mauritius", years: "2016–2020", rotation: "1deg" },
+  { city: "London", country: "UK", years: "2020–2021", rotation: "-0.5deg" },
+  { city: "Accra", country: "Ghana", years: "2021–2022", rotation: "1.5deg" },
+  { city: "Nairobi", country: "Kenya", years: "2022–2024", rotation: "-1deg" },
+  { city: "Lagos + Enugu", country: "Nigeria", years: "2024", rotation: "0.5deg" },
+  { city: "Stanford", country: "USA", years: "2024–present", isCurrent: true, rotation: "-0.8deg" },
 ];
 
 function CompassRing() {
@@ -106,76 +77,79 @@ export default function Timeline() {
         description="The places that raised me"
       />
 
-      <div className="relative">
-        {/* Horizontal wire */}
-        <div
-          className="absolute top-[18px] sm:top-[22px] left-0 right-0 h-px"
-          style={{
-            background: "repeating-linear-gradient(90deg, var(--color-ink) 0px, var(--color-ink) 6px, transparent 6px, transparent 12px)",
-            opacity: 0.12,
-          }}
-        />
+      {/* Postcard carousel — scrollable on mobile, wrapped on desktop */}
+      <div className="flex sm:flex-wrap sm:justify-center overflow-x-auto gap-4 sm:gap-5 px-2 sm:px-0 -mx-2 sm:mx-0 snap-x snap-mandatory scrollbar-hide pb-2"
+        style={{ WebkitOverflowScrolling: "touch", scrollbarWidth: "none", msOverflowStyle: "none" }}
+      >
+        {places.map((place, i) => {
+          const isHovered = hoveredIndex === i;
 
-        {/* Places along the wire — scrollable carousel on mobile, justified on desktop */}
-        <div className="flex items-start sm:justify-between overflow-x-auto gap-6 sm:gap-0 px-2 sm:px-0 -mx-2 sm:mx-0 snap-x snap-mandatory scrollbar-hide"
-          style={{ WebkitOverflowScrolling: "touch", scrollbarWidth: "none", msOverflowStyle: "none" }}
-        >
-          {places.map((place, i) => {
-            const isHovered = hoveredIndex === i;
+          return (
+            <div
+              key={place.city}
+              className="shrink-0 sm:shrink relative cursor-default snap-center"
+              onMouseEnter={() => setHoveredIndex(i)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              {/* Tack pin */}
+              <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 z-20">
+                <div className="w-3 h-3 rounded-full bg-coral/70 border border-coral/40 shadow-[0_1px_3px_rgba(0,0,0,0.15)]" />
+                <div className="w-px h-2 bg-ink/20 mx-auto" />
+              </div>
 
-            return (
+              {/* Postcard */}
               <div
-                key={place.city}
-                className="flex flex-col items-center shrink-0 sm:shrink sm:flex-1 min-w-[5.5rem] sm:min-w-0 relative cursor-default snap-center"
-                onMouseEnter={() => setHoveredIndex(i)}
-                onMouseLeave={() => setHoveredIndex(null)}
+                className={`relative w-[7rem] sm:w-[7.5rem] pt-4 pb-3 px-3 text-center transition-all duration-300
+                  bg-white/[0.35] backdrop-blur-[6px]
+                  border border-white/50
+                  shadow-[0_1px_8px_rgba(0,0,0,0.04),inset_0_1px_0_rgba(255,255,255,0.5)]
+                  ${isHovered
+                    ? "shadow-[0_4px_16px_rgba(0,0,0,0.08),inset_0_1px_0_rgba(255,255,255,0.6)] scale-105"
+                    : ""
+                  }`}
+                style={{ transform: `rotate(${place.rotation})${isHovered ? " scale(1.05)" : ""}` }}
               >
                 {/* Compass ring on hover */}
-                <div className={`relative z-10 flex items-center justify-center transition-all duration-300 ease-out ${
-                  isHovered ? "w-12 h-12 sm:w-14 sm:h-14" : "w-9 h-9 sm:w-11 sm:h-11"
-                }`}>
-                  {isHovered && <CompassRing />}
-                  {/* Dot */}
-                  <div
-                    className={`rounded-full border-[1.5px] transition-all duration-300 ${
-                      place.isCurrent
-                        ? "border-ink/40 bg-ink/30"
-                        : "border-ink/20 bg-cream"
-                    } ${isHovered ? "w-[11px] h-[11px] sm:w-[13px] sm:h-[13px] border-ink/40" : "w-[9px] h-[9px] sm:w-[11px] sm:h-[11px]"}`}
-                  />
-                </div>
+                {isHovered && (
+                  <div className="absolute top-3 left-1/2 -translate-x-1/2 w-10 h-10 opacity-30">
+                    <CompassRing />
+                  </div>
+                )}
 
-                {/* Label below */}
-                <div className={`mt-2 text-center px-1 transition-all duration-300 ${
-                  isHovered ? "transform scale-105" : ""
+                {/* City name */}
+                <p className={`text-sm font-display tracking-tight leading-tight transition-colors duration-200 relative z-10 ${
+                  place.isCurrent ? "font-semibold text-ink" : isHovered ? "text-ink font-medium" : "text-ink-light"
                 }`}>
-                  <p className={`text-sm font-display tracking-tight leading-tight transition-colors duration-200 ${
-                    place.isCurrent ? "font-semibold text-ink" : isHovered ? "text-ink font-medium" : "text-ink-light"
-                  }`}>
-                    {place.city}
-                    {place.isCurrent && <StanfordTree />}
-                  </p>
-                  <p className={`text-[0.6rem] sm:text-[0.65rem] uppercase tracking-[0.15em] font-mono mt-0.5 transition-colors duration-200 ${
-                    isHovered ? "text-ink-light/60" : "text-ink-light/40"
-                  }`}>
-                    {place.country}
-                  </p>
-                  <p className={`text-[0.55rem] sm:text-[0.6rem] uppercase tracking-[0.2em] font-mono mt-0.5 transition-colors duration-200 ${
-                    isHovered ? "text-ink-light/40" : "text-ink-light/25"
-                  }`}>
-                    {place.years}
-                  </p>
-                </div>
+                  {place.city}
+                  {place.isCurrent && <StanfordTree />}
+                </p>
+
+                {/* Country */}
+                <p className={`text-[0.6rem] uppercase tracking-[0.15em] font-mono mt-1 transition-colors duration-200 ${
+                  isHovered ? "text-ink-light/60" : "text-ink-light/40"
+                }`}>
+                  {place.country}
+                </p>
+
+                {/* Divider line */}
+                <div className="w-6 h-px bg-ink/[0.08] mx-auto my-1.5" />
+
+                {/* Years */}
+                <p className={`text-[0.55rem] uppercase tracking-[0.2em] font-mono transition-colors duration-200 ${
+                  isHovered ? "text-ink-light/40" : "text-ink-light/25"
+                }`}>
+                  {place.years}
+                </p>
               </div>
-            );
-          })}
-        </div>
-
-        {/* Swipe hint on mobile */}
-        <p className="sm:hidden text-center text-[0.55rem] uppercase tracking-[0.2em] text-coral/60 font-mono mt-6">
-          ← swipe →
-        </p>
+            </div>
+          );
+        })}
       </div>
+
+      {/* Swipe hint on mobile */}
+      <p className="sm:hidden text-center text-[0.55rem] uppercase tracking-[0.2em] text-coral/60 font-mono mt-6">
+        ← swipe →
+      </p>
     </section>
   );
 }
