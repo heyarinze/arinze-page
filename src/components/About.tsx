@@ -29,7 +29,7 @@ function renderInlineLinks(text: string): React.ReactNode {
       <>
         {renderInlineLinks(parts[0])}
         <a
-          href="https://www.youtube.com/watch?v=S7yiCMH9bYk"
+          href="https://www.youtube.com/watch?v=_YodZe1W-9Y&list=RD_YodZe1W-9Y&start_radio=1"
           target="_blank"
           rel="noopener noreferrer"
           className="text-coral hover:underline font-medium"

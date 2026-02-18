@@ -29,10 +29,16 @@ const extracurriculars: Extracurricular[] = [
   },
   {
     role: "Founder",
-    org: "Queer African Network",
+    org: "PRiDE+",
     orgLink: "https://www.instagram.com/queerafricannetwork/?hl=en",
     year: "2023",
     description: "The student-run society at the African Leadership University creating safe spaces for queer students and allies across the Rwanda and Mauritius campuses.",
+  },
+  {
+    role: "Advisory Board Member",
+    org: "Queer African Network",
+    orgLink: "https://www.instagram.com/queerafricannetwork/?hl=en",
+    year: "2023",
   },
   {
     role: "Co-Lead, Alumni Pride Network",
@@ -48,7 +54,7 @@ const extracurriculars: Extracurricular[] = [
   },
 ];
 
-const accentColors = ["text-coral", "text-blue", "text-gold", "text-coral", "text-blue", "text-gold"];
+const accentColors = ["text-coral", "text-blue", "text-gold", "text-coral", "text-blue", "text-gold", "text-coral"];
 
 export default function Extracurriculars() {
   return (
