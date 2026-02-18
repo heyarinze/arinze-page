@@ -98,11 +98,7 @@ export default function Hero() {
             href="https://www.bit.ly/arinzechat"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-5 py-2 bg-ink text-cream font-mono text-xs uppercase tracking-widest rounded-sm hover:opacity-90 transition-opacity cursor-pointer"
-            style={{
-              WebkitBackgroundClip: "padding-box",
-              backgroundClip: "padding-box",
-            }}
+            className="inline-block stamp text-ink hover:text-coral hover:border-coral transition-colors cursor-pointer"
           >
             Let&apos;s Chat ↗
           </a>

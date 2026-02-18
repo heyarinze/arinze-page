@@ -13,7 +13,7 @@ export default function Essays() {
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group block p-5 rounded-lg border border-white/30 bg-white/25 backdrop-blur-sm hover:bg-white/40 hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all"
+            className="group block p-5 rounded-lg border border-white/40 bg-white/15 backdrop-blur-md shadow-[inset_0_1px_1px_rgba(255,255,255,0.4)] hover:bg-white/30 hover:shadow-[inset_0_1px_2px_rgba(255,255,255,0.6),0_8px_32px_rgba(0,0,0,0.08)] hover:border-white/60 transition-all duration-300"
           >
             <div className="flex items-center gap-2 mb-2">
               <span className="text-[0.6rem] uppercase tracking-[0.15em] text-gold font-medium">

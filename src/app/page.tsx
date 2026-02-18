@@ -5,6 +5,7 @@ import Work from "@/components/Work";
 import Essays from "@/components/Essays";
 import Shelf from "@/components/Shelf";
 import Newsletter from "@/components/Newsletter";
+import Mantra from "@/components/Mantra";
 import { SectionDivider } from "@/components/Glyph";
 
 export default function Home() {
@@ -23,6 +24,8 @@ export default function Home() {
       <Newsletter />
       <SectionDivider />
       <Shelf />
+      <SectionDivider />
+      <Mantra />
     </>
   );
 }
