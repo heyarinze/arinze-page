@@ -1,12 +1,49 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { Glyph } from "./Glyph";
 
 const socials = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/arinzeobiezue" },
   { label: "X", href: "https://www.x.com/heyarinze" },
-  { label: "Instagram", href: "https://www.instagram.com/heyarinze" },
+  { label: "Threads", href: "https://www.threads.com/@heyarinze" },
   { label: "TikTok", href: "https://www.tiktok.com/@helloarinze" },
   { label: "Wabi", href: "https://wabi.ai/@heyarinze" },
 ];
+
+const orbitWords = [
+  { text: "AI", color: "text-blue" },
+  { text: "media", color: "text-coral" },
+  { text: "education", color: "text-gold" },
+];
+
+function RotatingWords() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % orbitWords.length);
+    }, 600);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <>
+      {orbitWords.map((word, i) => (
+        <span key={word.text}>
+          {i > 0 && (i === orbitWords.length - 1 ? ", and " : ", ")}
+          <span
+            className={`${word.color} font-medium transition-opacity duration-200 ${
+              i === activeIndex ? "opacity-100" : "opacity-30"
+            }`}
+          >
+            {word.text}
+          </span>
+        </span>
+      ))}
+    </>
+  );
+}
 
 export default function Hero() {
   return (
@@ -37,9 +74,7 @@ export default function Hero() {
         <p className="mt-6 text-sm sm:text-base text-ink-light tracking-wide max-w-lg">
           <span className="text-coral glyph mr-1">▲</span>
           building within the orbits of{" "}
-          <span className="text-blue font-medium">AI</span>,{" "}
-          <span className="text-coral font-medium">media</span>, and{" "}
-          <span className="text-gold font-medium">education</span>
+          <RotatingWords />
         </p>
 
         {/* Social icons */}
@@ -63,7 +98,11 @@ export default function Hero() {
             href="https://www.bit.ly/arinzechat"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block stamp text-ink hover:text-coral hover:border-coral transition-colors cursor-pointer"
+            className="inline-block px-5 py-2 bg-ink text-cream font-mono text-xs uppercase tracking-widest rounded-sm hover:opacity-90 transition-opacity cursor-pointer"
+            style={{
+              WebkitBackgroundClip: "padding-box",
+              backgroundClip: "padding-box",
+            }}
           >
             Let&apos;s Chat ↗
           </a>

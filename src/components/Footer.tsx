@@ -10,8 +10,8 @@ const socials = [
     glyph: "→",
   },
   {
-    label: "Instagram",
-    href: "https://www.instagram.com/heyarinze",
+    label: "Threads",
+    href: "https://www.threads.com/@heyarinze",
     glyph: "→",
   },
   {

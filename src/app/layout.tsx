@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingAdinkra from "@/components/FloatingAdinkra";
+import ProgressBar from "@/components/ProgressBar";
 
 const ibmPlexMono = IBM_Plex_Mono({
   variable: "--font-ibm-plex-mono",
@@ -39,6 +40,7 @@ export default function RootLayout({
       <body
         className={`${ibmPlexMono.variable} ${playfairDisplay.variable} ${caveat.variable} antialiased font-mono`}
       >
+        <ProgressBar />
         <FloatingAdinkra />
         <Navigation />
         <main className="relative z-10">{children}</main>

@@ -4,13 +4,13 @@ import Image from "next/image";
 import { useState } from "react";
 
 const links = [
-  { label: "Home", href: "#home", glyph: "◎" },
-  { label: "About", href: "#about", glyph: "△" },
-  { label: "Creations", href: "#work", glyph: "◆" },
-  { label: "Thoughts", href: "#thoughts", glyph: "▲" },
-  { label: "Extracurriculars", href: "#extracurriculars", glyph: "⬡" },
-  { label: "Newsletter", href: "#newsletter", glyph: "◇" },
-  { label: "Shelf", href: "#shelf", glyph: "✦" },
+  { label: "Home", href: "#home", glyph: "◎", hoverColor: "hover:text-[#E8573A]" },
+  { label: "About", href: "#about", glyph: "△", hoverColor: "hover:text-[#E8A117]" },
+  { label: "Creations", href: "#work", glyph: "◆", hoverColor: "hover:text-[#D4A017]" },
+  { label: "Thoughts", href: "#thoughts", glyph: "▲", hoverColor: "hover:text-[#2EA043]" },
+  { label: "Extracurriculars", href: "#extracurriculars", glyph: "⬡", hoverColor: "hover:text-[#2563EB]" },
+  { label: "Newsletter", href: "#newsletter", glyph: "◇", hoverColor: "hover:text-[#4F46E5]" },
+  { label: "Shelf", href: "#shelf", glyph: "✦", hoverColor: "hover:text-[#7C3AED]" },
 ];
 
 export default function Navigation() {
@@ -38,7 +38,7 @@ export default function Navigation() {
             <a
               key={link.href}
               href={link.href}
-              className="group flex items-center gap-1.5 text-xs uppercase tracking-widest text-ink-light hover:text-coral transition-colors"
+              className={`group flex items-center gap-1.5 text-xs uppercase tracking-widest text-ink-light ${link.hoverColor} transition-colors`}
             >
               <span className="glyph text-[10px] opacity-40 group-hover:opacity-100 transition-opacity">
                 {link.glyph}
@@ -66,7 +66,7 @@ export default function Navigation() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="block py-2 text-sm uppercase tracking-widest text-ink-light hover:text-coral transition-colors"
+              className={`block py-2 text-sm uppercase tracking-widest text-ink-light ${link.hoverColor} transition-colors`}
             >
               <span className="glyph text-xs mr-2 opacity-40">
                 {link.glyph}

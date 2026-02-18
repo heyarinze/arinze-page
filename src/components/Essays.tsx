@@ -13,14 +13,11 @@ export default function Essays() {
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group block p-4 border border-ink/5 bg-cream/50 hover:bg-white/60 transition-all"
+            className="group block p-5 rounded-lg border border-white/30 bg-white/25 backdrop-blur-sm hover:bg-white/40 hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all"
           >
             <div className="flex items-center gap-2 mb-2">
-              <span className="stamp text-[0.55rem] py-0 px-1.5 border-gold text-gold">
+              <span className="text-[0.6rem] uppercase tracking-[0.15em] text-gold font-medium">
                 {item.type}
-              </span>
-              <span className="text-[0.6rem] text-ink-light/40">
-                {item.outlet}
               </span>
             </div>
             <h3 className="text-sm font-medium text-ink leading-snug group-hover:text-gold transition-colors">
