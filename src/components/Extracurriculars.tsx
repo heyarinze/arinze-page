@@ -1,6 +1,14 @@
 import { SectionHeader } from "./Glyph";
 
-const extracurriculars = [
+interface Extracurricular {
+  role: string;
+  org: string;
+  orgLink: string;
+  year: string;
+  description?: string;
+}
+
+const extracurriculars: Extracurricular[] = [
   {
     role: "Judge, Anthropic Track",
     org: "Stanford TreeHacks",
@@ -20,10 +28,11 @@ const extracurriculars = [
     year: "2024",
   },
   {
-    role: "Advisory Board Member",
+    role: "Founder",
     org: "Queer African Network",
     orgLink: "https://www.instagram.com/queerafricannetwork/?hl=en",
     year: "2023",
+    description: "The student-run society at the African Leadership University creating safe spaces for queer students and allies across the Rwanda and Mauritius campuses.",
   },
   {
     role: "Co-Lead, Alumni Pride Network",
@@ -86,6 +95,13 @@ export default function Extracurriculars() {
               {item.year && (
                 <p className="mt-2 text-[0.55rem] uppercase tracking-[0.25em] text-ink-light/30 font-mono">
                   — {item.year} —
+                </p>
+              )}
+
+              {/* Optional description */}
+              {item.description && (
+                <p className="mt-2 text-[0.6rem] leading-relaxed text-ink-light/50 font-mono normal-case tracking-normal">
+                  {item.description}
                 </p>
               )}
 

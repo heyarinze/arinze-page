@@ -100,10 +100,10 @@ export default function Timeline() {
   return (
     <section className="max-w-5xl mx-auto px-6">
       <SectionHeader
-        title="My Map"
+        title="My Homes"
         glyph="◎"
         id="map"
-        description="The places that have shaped me"
+        description="The places that raised me"
       />
 
       <div className="relative">
