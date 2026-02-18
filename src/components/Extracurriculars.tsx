@@ -62,8 +62,8 @@ export default function Extracurriculars() {
           >
             {/* Plaque */}
             <div
-              className={`border-2 border-white/10 bg-white/5 backdrop-blur-sm p-5 text-center transition-all
-                group-hover:border-white/20 group-hover:shadow-[0_2px_12px_rgba(255,255,255,0.04)]
+              className={`border-2 border-ink/10 bg-cream/80 p-5 text-center transition-all
+                group-hover:border-ink/20 group-hover:shadow-[0_2px_12px_rgba(0,0,0,0.06)]
                 relative overflow-hidden`}
               style={{ transform: "rotate(-0.5deg)" }}
             >
@@ -76,7 +76,7 @@ export default function Extracurriculars() {
               <h3
                 className={`font-display text-base font-semibold tracking-tight ${accentColors[i % accentColors.length]} group-hover:opacity-80 transition-opacity`}
                 style={{
-                  textShadow: "0 1px 0 rgba(255,255,255,0.08)",
+                  textShadow: "0 1px 0 rgba(255,255,255,0.6)",
                 }}
               >
                 {item.org}
@@ -90,10 +90,10 @@ export default function Extracurriculars() {
               )}
 
               {/* Subtle corner accents */}
-              <span className="absolute top-1.5 left-1.5 text-[6px] text-ink-light/20 select-none">◆</span>
-              <span className="absolute top-1.5 right-1.5 text-[6px] text-ink-light/20 select-none">◆</span>
-              <span className="absolute bottom-1.5 left-1.5 text-[6px] text-ink-light/20 select-none">◆</span>
-              <span className="absolute bottom-1.5 right-1.5 text-[6px] text-ink-light/20 select-none">◆</span>
+              <span className="absolute top-1.5 left-1.5 text-[6px] text-ink-light/15 select-none">◆</span>
+              <span className="absolute top-1.5 right-1.5 text-[6px] text-ink-light/15 select-none">◆</span>
+              <span className="absolute bottom-1.5 left-1.5 text-[6px] text-ink-light/15 select-none">◆</span>
+              <span className="absolute bottom-1.5 right-1.5 text-[6px] text-ink-light/15 select-none">◆</span>
             </div>
           </a>
         ))}

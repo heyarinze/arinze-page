@@ -26,10 +26,10 @@ export default function Work() {
           return (
             <div
               key={project.title}
-              className={`group border-l-4 ${accentColors[i % accentColors.length]} bg-white/5 backdrop-blur-sm border border-white/10 p-5 hover:bg-white/10 transition-all relative`}
+              className={`group border-l-4 ${accentColors[i % accentColors.length]} bg-cream/50 border border-ink/5 p-5 hover:bg-white/60 transition-all relative`}
             >
               {/* Glyph marker */}
-              <span className="absolute -left-3 top-4 bg-cream text-xs glyph text-ink-light/60 group-hover:text-coral transition-colors">
+              <span className="absolute -left-3 top-4 bg-cream text-xs glyph text-ink-light/40 group-hover:text-coral transition-colors">
                 {glyphMarkers[i % glyphMarkers.length]}
               </span>
 
