@@ -14,7 +14,7 @@ const socials = [
 const orbitWords = [
   { text: "ai", color: "text-blue" },
   { text: "media", color: "text-coral" },
-  { text: "education", color: "text-gold" },
+  { text: "capital", color: "text-gold" },
 ];
 
 function FlashingWords() {
