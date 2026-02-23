@@ -5,14 +5,14 @@ import { SectionHeader } from "./Glyph";
 
 export default function Shelf() {
   useEffect(() => {
-    // Load RSS widget script
-    const existing = document.querySelector('script[src="https://widget.rss.app/v1/carousel.js"]');
-    if (!existing) {
-      const script = document.createElement("script");
-      script.src = "https://widget.rss.app/v1/carousel.js";
-      script.type = "text/javascript";
-      script.async = true;
-      document.body.appendChild(script);
+    // Load Letterboxd watchlist embed
+    const wrapper = document.getElementById("letterboxd-embed-wrapper-tc");
+    if (wrapper) {
+      fetch("https://lb-embed-content.bokonon.dev?username=heyarinze")
+        .then((response) => response.text())
+        .then((data) => {
+          wrapper.innerHTML = data;
+        });
     }
   }, []);
 
@@ -159,34 +159,15 @@ export default function Shelf() {
         </div>
       </div>
 
-      {/* Recent Watch - RSS Widget */}
+      {/* Recent Watch - Letterboxd Embed */}
       <div className="mt-10">
         <h3 className="font-display text-xl font-semibold text-ink mb-4 flex items-center gap-2">
           <span className="text-gold glyph text-sm">▲</span>
           Recent Watch
         </h3>
-        <div
-          className="border border-white/20 rounded-lg p-4 bg-white/30 backdrop-blur-sm"
-          dangerouslySetInnerHTML={{
-            __html: `
-              <style>
-                rssapp-carousel {
-                  --rssapp-bg: transparent !important;
-                  --rssapp-card-bg: rgba(255, 255, 255, 0.35) !important;
-                  --rssapp-card-border: rgba(0, 0, 0, 0.05) !important;
-                  backdrop-filter: blur(8px);
-                }
-                rssapp-carousel .rssapp-card {
-                  background: rgba(255, 255, 255, 0.35) !important;
-                  backdrop-filter: blur(8px) !important;
-                  border: 1px solid rgba(0, 0, 0, 0.05) !important;
-                  border-radius: 8px !important;
-                }
-              </style>
-              <rssapp-carousel id="XFFE5QaR1nHWh78F"></rssapp-carousel>
-            `,
-          }}
-        />
+        <div className="border border-white/20 rounded-lg p-4 bg-white/30 backdrop-blur-sm">
+          <div id="letterboxd-embed-wrapper-tc">Loading...</div>
+        </div>
       </div>
     </section>
   );
