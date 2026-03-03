@@ -13,7 +13,7 @@ const socials = [
 
 const orbitWords = [
   { text: "ai", color: "text-blue" },
-  { text: "media", color: "text-coral" },
+  { text: "culture", color: "text-coral" },
   { text: "capital", color: "text-gold" },
 ];
 
