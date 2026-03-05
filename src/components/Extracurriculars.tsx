@@ -16,6 +16,12 @@ const extracurriculars: Extracurricular[] = [
     year: "2026",
   },
   {
+    role: "Fellow",
+    org: "Thinking About Thinking",
+    orgLink: "https://www.thinkingaboutthinking.org/",
+    year: "2026",
+  },
+  {
     role: "Judge",
     org: "Africa Technology Expo",
     orgLink: "https://africatechnologyexpo.com",
@@ -32,12 +38,6 @@ const extracurriculars: Extracurricular[] = [
     org: "Queer African Network",
     orgLink: "https://www.instagram.com/queerafricannetwork/?hl=en",
     year: "2023",
-  },
-  {
-    role: "Co-Lead, Alumni Pride Network",
-    org: "Schwarzman Scholars",
-    orgLink: "https://www.schwarzmanscholars.org",
-    year: "2022",
   },
   {
     role: "Judge (London)",
