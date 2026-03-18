@@ -19,13 +19,10 @@ export default function ProgressBar() {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-[60] h-[1.5px] pointer-events-none">
+    <div className="fixed top-0 left-0 right-0 z-[60] h-[3px] pointer-events-none">
       <div
-        className="h-full transition-[width] duration-100 ease-out"
-        style={{
-          width: `${progress}%`,
-          backgroundImage: "linear-gradient(to right, #008751 33%, white 33%, white 66%, #008751 66%)",
-        }}
+        className="h-full bg-ink transition-[width] duration-100 ease-out"
+        style={{ width: `${progress}%` }}
       />
     </div>
   );
