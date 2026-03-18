@@ -37,7 +37,7 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-xs text-ink-light tracking-wide">
           <span className="glyph text-coral mr-1">◇</span>
-          Built with Claude Code by Arinze Obiezue &copy; {new Date().getFullYear()}
+          Built by Arinze Obiezue & Claude Code
         </p>
         <div className="flex items-center gap-6 flex-wrap justify-center">
           {socials.map((s) => (
