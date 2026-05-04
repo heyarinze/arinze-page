@@ -4,7 +4,7 @@ import shelfData from "@/data/shelf.json";
 export default function Essays() {
   return (
     <section className="max-w-5xl mx-auto px-6">
-      <SectionHeader title="My Thoughts" glyph="▲" id="thoughts" description="Some ideas and experiences I made time to flesh out" />
+      <SectionHeader title="My Writing" glyph="▲" id="thoughts" description="Some ideas and experiences I made time to flesh out" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
         {shelfData.published.map((item, i) => (

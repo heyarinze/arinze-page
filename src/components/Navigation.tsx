@@ -7,7 +7,7 @@ const links = [
   { label: "Home", href: "#home", glyph: "◎", hoverColor: "hover:text-[#E8573A]" },
   { label: "About", href: "#about", glyph: "△", hoverColor: "hover:text-[#E8A117]" },
   { label: "Creations", href: "#work", glyph: "◆", hoverColor: "hover:text-[#D4A017]" },
-  { label: "Thoughts", href: "#thoughts", glyph: "▲", hoverColor: "hover:text-[#2EA043]" },
+  { label: "Writing", href: "#thoughts", glyph: "▲", hoverColor: "hover:text-[#2EA043]" },
   { label: "Extracurriculars", href: "#extracurriculars", glyph: "⬡", hoverColor: "hover:text-[#2563EB]" },
   { label: "Newsletter", href: "#newsletter", glyph: "◇", hoverColor: "hover:text-[#4F46E5]" },
   { label: "Shelf", href: "#shelf", glyph: "✦", hoverColor: "hover:text-[#7C3AED]" },
