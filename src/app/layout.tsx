@@ -27,7 +27,7 @@ const caveat = Caveat({
 export const metadata: Metadata = {
   title: "Arinze Obiezue",
   description:
-    "Building within the orbits of AI, capital, and culture.",
+    "Building within the orbits of AI, culture, and education.",
 };
 
 export default function RootLayout({
