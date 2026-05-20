@@ -42,7 +42,7 @@ const extracurriculars: Extracurricular[] = [
   {
     role: "Judge (London)",
     org: "Princess Diana Awards",
-    orgLink: "https://diana-award.org.uk",
+    orgLink: "https://diana-award.org.uk/blog/thanking-our-2021-diana-award-judging-panel-this-volunteers-week",
     year: "2021",
   },
 ];
