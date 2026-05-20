@@ -36,7 +36,7 @@ function renderInlineLinks(text: string): React.ReactNode {
           rel="noopener noreferrer"
           className="text-coral hover:underline font-medium"
         >
-          singing and playing the keyboard on a TEDx stage
+          singing an original song while playing the keyboard on a TEDx stage
         </a>
         {renderInlineLinks(parts[1])}
       </>
