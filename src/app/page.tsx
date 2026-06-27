@@ -16,9 +16,9 @@ export default function Home() {
       <SectionDivider />
       <About />
       <SectionDivider />
-      <WorkHistory />
-      <SectionDivider />
       <Timeline />
+      <SectionDivider />
+      <WorkHistory />
       <SectionDivider />
       <Work />
       <SectionDivider />

@@ -69,7 +69,7 @@ const roles: Role[] = [
     title: "MBA Candidate",
     period: "2024–2026",
     kind: "study",
-    logo: "/logos/stanford.png",
+    logo: "/logos/gsb.jpeg",
     rotation: "-0.8deg",
   },
   {
@@ -91,7 +91,7 @@ export default function WorkHistory() {
           title="My Career"
           glyph="❖"
           id="career"
-          description="The path I've walked, one role to the next"
+          description="The path I've walked"
         />
         <span className="mb-10 text-sm font-bold uppercase tracking-[0.2em] text-coral select-none -rotate-6 inline-block">
           drag / scroll →
@@ -165,7 +165,7 @@ export default function WorkHistory() {
                 {/* Kind tag */}
                 <div className="flex items-center justify-center text-[0.55rem] uppercase tracking-[0.18em] font-mono">
                   <span className={role.incoming ? "text-coral font-semibold" : "text-ink-light/40"}>
-                    {role.incoming ? "Incoming" : role.kind === "study" ? "Study" : "Role"}
+                    {role.incoming ? "Incoming" : role.kind === "study" ? "School" : "Work"}
                   </span>
                 </div>
 
