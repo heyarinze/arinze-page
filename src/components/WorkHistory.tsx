@@ -31,6 +31,7 @@ const roles: Role[] = [
     period: "2020–2021",
     kind: "work",
     logo: "/logos/meta.png",
+    logoClass: "h-full w-full",
     rotation: "1deg",
   },
   {
@@ -48,6 +49,7 @@ const roles: Role[] = [
     period: "2021–2022",
     kind: "study",
     logo: "/logos/schwarzman.jpeg",
+    logoClass: "h-full w-full",
     rotation: "1.3deg",
   },
   {
@@ -57,6 +59,7 @@ const roles: Role[] = [
     kind: "work",
     logo: "/logos/kenga.png",
     logoBg: "#000000",
+    logoClass: "h-full w-full",
     rotation: "-1deg",
   },
   {
