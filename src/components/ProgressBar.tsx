@@ -21,8 +21,12 @@ export default function ProgressBar() {
   return (
     <div className="fixed top-0 left-0 right-0 z-[60] h-[3px] pointer-events-none">
       <div
-        className="h-full bg-ink transition-[width] duration-100 ease-out"
-        style={{ width: `${progress}%` }}
+        className="h-full transition-[width] duration-100 ease-out"
+        style={{
+          width: `${progress}%`,
+          backgroundImage:
+            "linear-gradient(to right, #E40303 0 16.666%, #FF8C00 16.666% 33.333%, #FFED00 33.333% 50%, #008026 50% 66.666%, #004DFF 66.666% 83.333%, #750787 83.333% 100%)",
+        }}
       />
     </div>
   );
