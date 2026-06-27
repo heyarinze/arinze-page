@@ -94,7 +94,7 @@ export default function WorkHistory() {
           title="My Career"
           glyph="❖"
           id="career"
-          description="The path I've walked"
+          description="The path I'm walking"
         />
         <span className="mb-10 text-sm font-bold uppercase tracking-[0.2em] text-coral select-none -rotate-6 inline-block">
           drag / scroll →
