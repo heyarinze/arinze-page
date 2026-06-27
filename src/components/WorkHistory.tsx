@@ -1,5 +1,8 @@
+"use client";
+
 import { Fragment } from "react";
 import { SectionHeader } from "./Glyph";
+import { useSlideHint } from "./useSlideHint";
 
 interface Role {
   org: string;
@@ -93,6 +96,7 @@ const roles: Role[] = [
 ];
 
 export default function WorkHistory() {
+  const trackRef = useSlideHint<HTMLDivElement>();
   return (
     <section className="max-w-6xl mx-auto px-6">
       <div className="flex items-end justify-between gap-4 flex-wrap">
@@ -107,7 +111,7 @@ export default function WorkHistory() {
         </span>
       </div>
 
-      <div className="carousel-fade flex items-center overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 -mx-6 px-6">
+      <div ref={trackRef} className="carousel-fade flex items-center overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 -mx-6 px-6">
         {roles.map((role, i) => (
           <Fragment key={role.org}>
             {/* Arrow connector */}
