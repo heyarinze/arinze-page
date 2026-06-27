@@ -50,7 +50,7 @@ const roles: Role[] = [
     rotation: "1.3deg",
   },
   {
-    org: "Kenga",
+    org: "Kenga Media",
     title: "Founder, CEO & Publisher",
     period: "2022–present",
     kind: "work",
