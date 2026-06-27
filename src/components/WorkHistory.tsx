@@ -68,7 +68,7 @@ const roles: Role[] = [
   },
   {
     org: "Stanford GSB",
-    title: "MBA Candidate",
+    title: "MBA",
     period: "2024–2026",
     kind: "study",
     logo: "/logos/gsb.jpeg",
