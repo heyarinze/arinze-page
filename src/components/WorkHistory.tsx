@@ -5,8 +5,9 @@ interface Role {
   org: string;
   title: string;
   period: string;
-  duration: string;
   kind: "work" | "study";
+  logo?: string;
+  mono?: string;
   note?: string;
   incoming?: boolean;
   rotation: string;
@@ -17,8 +18,8 @@ const roles: Role[] = [
     org: "ALU",
     title: "Inaugural Class · BSc Business Management",
     period: "2015–2020",
-    duration: "5 yrs",
     kind: "study",
+    logo: "/logos/alu.png",
     note: "Valedictorian",
     rotation: "-1.2deg",
   },
@@ -26,16 +27,16 @@ const roles: Role[] = [
     org: "Meta",
     title: "Content Designer",
     period: "2020–2021",
-    duration: "1 yr",
     kind: "work",
+    logo: "/logos/meta.png",
     rotation: "1deg",
   },
   {
     org: "EarlyAdmit",
     title: "Co-Founder",
     period: "2020–2023",
-    duration: "3 yrs",
     kind: "work",
+    mono: "EA",
     note: "Acquired",
     rotation: "-0.6deg",
   },
@@ -43,40 +44,40 @@ const roles: Role[] = [
     org: "Schwarzman Scholars",
     title: "Master's, Global Affairs · AI Policy",
     period: "2021–2022",
-    duration: "1 yr",
     kind: "study",
+    logo: "/logos/schwarzman.jpeg",
     rotation: "1.3deg",
   },
   {
     org: "Kenga",
     title: "Founder, CEO & Publisher",
     period: "2022–present",
-    duration: "Present",
     kind: "work",
+    logo: "/logos/kenga.png",
     rotation: "-1deg",
   },
   {
     org: "Future Africa",
     title: "Investment Team",
     period: "2022–2024",
-    duration: "2 yrs",
     kind: "work",
+    logo: "/logos/futureafrica.jpg",
     rotation: "0.7deg",
   },
   {
     org: "Stanford GSB",
     title: "MBA Candidate",
     period: "2024–2026",
-    duration: "2 yrs",
     kind: "study",
+    logo: "/logos/stanford.png",
     rotation: "-0.8deg",
   },
   {
     org: "Anthropic",
     title: "Incoming",
     period: "2026",
-    duration: "Incoming",
     kind: "work",
+    logo: "/logos/anthropic.webp",
     incoming: true,
     rotation: "1deg",
   },
@@ -85,12 +86,17 @@ const roles: Role[] = [
 export default function WorkHistory() {
   return (
     <section className="max-w-6xl mx-auto px-6">
-      <SectionHeader
-        title="My Work"
-        glyph="❖"
-        id="career"
-        description="The path I've walked, one role to the next"
-      />
+      <div className="flex items-end justify-between gap-4 flex-wrap">
+        <SectionHeader
+          title="My Career"
+          glyph="❖"
+          id="career"
+          description="The path I've walked, one role to the next"
+        />
+        <span className="mb-10 text-sm font-bold uppercase tracking-[0.2em] text-coral select-none -rotate-6 inline-block">
+          drag / scroll →
+        </span>
+      </div>
 
       <div className="carousel-fade flex items-center overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 -mx-6 px-6">
         {roles.map((role, i) => (
@@ -122,6 +128,22 @@ export default function WorkHistory() {
                   hover:-translate-y-1`}
                 style={{ transform: `rotate(${role.rotation})` }}
               >
+                {/* Logo */}
+                <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-white border border-ink/[0.06] shadow-[0_1px_3px_rgba(0,0,0,0.05)] overflow-hidden">
+                  {role.logo ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={role.logo}
+                      alt={`${role.org} logo`}
+                      className="h-8 w-8 object-contain"
+                    />
+                  ) : (
+                    <span className="font-display text-base font-bold text-ink">
+                      {role.mono}
+                    </span>
+                  )}
+                </div>
+
                 {/* Period */}
                 <p className={`text-[0.65rem] uppercase tracking-[0.18em] font-mono ${role.incoming ? "text-coral" : role.kind === "study" ? "text-gold" : "text-coral"}`}>
                   {role.period}
@@ -140,14 +162,10 @@ export default function WorkHistory() {
                 {/* Divider */}
                 <div className="w-8 h-px bg-ink/[0.08] mx-auto my-2.5" />
 
-                {/* Duration + kind tag */}
-                <div className="flex items-center justify-center gap-2 text-[0.55rem] uppercase tracking-[0.18em] font-mono">
-                  <span className={role.incoming ? "text-coral font-semibold" : "text-ink/60"}>
-                    {role.duration}
-                  </span>
-                  <span className="text-ink-light/30">·</span>
-                  <span className="text-ink-light/40">
-                    {role.kind === "study" ? "Study" : "Role"}
+                {/* Kind tag */}
+                <div className="flex items-center justify-center text-[0.55rem] uppercase tracking-[0.18em] font-mono">
+                  <span className={role.incoming ? "text-coral font-semibold" : "text-ink-light/40"}>
+                    {role.incoming ? "Incoming" : role.kind === "study" ? "Study" : "Role"}
                   </span>
                 </div>
 
@@ -162,11 +180,6 @@ export default function WorkHistory() {
           </Fragment>
         ))}
       </div>
-
-      {/* Scroll hint on mobile */}
-      <p className="sm:hidden text-center text-[0.55rem] uppercase tracking-[0.2em] text-coral/60 font-mono mt-5">
-        ← swipe →
-      </p>
     </section>
   );
 }

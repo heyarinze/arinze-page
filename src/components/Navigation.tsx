@@ -6,7 +6,7 @@ import { useState } from "react";
 const links = [
   { label: "Home", href: "#home", glyph: "◎", hoverColor: "hover:text-[#E8573A]" },
   { label: "About", href: "#about", glyph: "△", hoverColor: "hover:text-[#E8A117]" },
-  { label: "Work", href: "#career", glyph: "❖", hoverColor: "hover:text-[#0F766E]" },
+  { label: "Career", href: "#career", glyph: "❖", hoverColor: "hover:text-[#0F766E]" },
   { label: "Creations", href: "#work", glyph: "◆", hoverColor: "hover:text-[#D4A017]" },
   { label: "Writing", href: "#thoughts", glyph: "▲", hoverColor: "hover:text-[#2EA043]" },
   { label: "Extracurriculars", href: "#extracurriculars", glyph: "⬡", hoverColor: "hover:text-[#2563EB]" },
