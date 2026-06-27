@@ -2,12 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 import { SectionHeader } from "./Glyph";
-import { useSlideHint } from "./useSlideHint";
 import shelfData from "@/data/shelf.json";
 
 export default function Essays() {
   const sectionRef = useRef<HTMLElement>(null);
-  const trackRef = useSlideHint<HTMLDivElement>();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -35,7 +33,7 @@ export default function Essays() {
         </span>
       </div>
 
-      <div ref={trackRef} className="carousel-fade flex gap-5 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-6 -mx-6 px-6">
+      <div className="carousel-fade flex gap-5 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-6 -mx-6 px-6">
         {shelfData.published.map((item, i) => (
           <div
             key={item.title}
