@@ -40,7 +40,7 @@ const roles: Role[] = [
     period: "2020–2023",
     kind: "work",
     logo: "/logos/earlyadmit.jpeg",
-    logoClass: "h-full w-full",
+    logoClass: "h-full w-[84%]",
     note: "Acquired",
     rotation: "-0.6deg",
   },
