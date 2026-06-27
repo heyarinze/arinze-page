@@ -157,6 +157,24 @@ a.accent-link:hover {
   animation: float-shadow 4s ease-in-out infinite;
 }
 
+/* ── Writing carousel: edge fade for visual demarcation ─────── */
+.carousel-fade {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 36px,
+    #000 calc(100% - 36px),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 36px,
+    #000 calc(100% - 36px),
+    transparent 100%
+  );
+}
+
 /* ── Writing carousel: slide-in entrance + gentle float ─────── */
 @keyframes card-slide-in {
   0% { opacity: 0; transform: translateX(64px); }

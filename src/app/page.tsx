@@ -5,7 +5,6 @@ import Extracurriculars from "@/components/Extracurriculars";
 import Work from "@/components/Work";
 import Essays from "@/components/Essays";
 import Shelf from "@/components/Shelf";
-import OtherWriting from "@/components/OtherWriting";
 import Mantra from "@/components/Mantra";
 import { SectionDivider } from "@/components/Glyph";
 
@@ -23,8 +22,6 @@ export default function Home() {
       <Extracurriculars />
       <SectionDivider />
       <Essays />
-      <SectionDivider />
-      <OtherWriting />
       <SectionDivider />
       <Shelf />
       <SectionDivider />

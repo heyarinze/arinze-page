@@ -33,7 +33,7 @@ export default function Essays() {
         </span>
       </div>
 
-      <div className="flex gap-5 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-6 -mx-6 px-6">
+      <div className="carousel-fade flex gap-5 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-6 -mx-6 px-6">
         {shelfData.published.map((item, i) => (
           <div
             key={item.title}
