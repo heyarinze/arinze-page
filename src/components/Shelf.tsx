@@ -153,7 +153,7 @@ export default function Shelf() {
           </h3>
           <iframe
             style={{ borderRadius: 12 }}
-            src="https://open.spotify.com/embed/playlist/2JfVdyBRmSSyzqhZGHs7r7?utm_source=generator"
+            src="https://open.spotify.com/embed/playlist/2JfVdyBRmSSyzqhZGHs7r7?utm_source=generator&si=eb0f0d2a35cf489b"
             width="100%"
             height="352"
             frameBorder="0"
