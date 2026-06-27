@@ -125,9 +125,6 @@ export default function About() {
               sizes="192px"
             />
           </div>
-          <p className="font-cursive text-base font-bold text-ink text-center md:text-left" style={{ letterSpacing: "0.01em" }}>
-            Creator. Schwarzman Scholar. Skoll Fellow. Stanford MBA.
-          </p>
         </div>
 
         {/* Bio */}
