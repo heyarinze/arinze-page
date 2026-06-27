@@ -79,7 +79,7 @@ const roles: Role[] = [
   },
   {
     org: "Anthropic",
-    title: "Incoming",
+    title: "Incoming Program Manager",
     period: "2026",
     kind: "work",
     logo: "/logos/anthropic.webp",
