@@ -157,6 +157,32 @@ a.accent-link:hover {
   animation: float-shadow 4s ease-in-out infinite;
 }
 
+/* ── Writing carousel: slide-in entrance + gentle float ─────── */
+@keyframes card-slide-in {
+  0% { opacity: 0; transform: translateX(64px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes card-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+.card-enter {
+  animation: card-slide-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+.card-bob {
+  animation: card-float 5.5s ease-in-out infinite;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-enter,
+  .card-bob {
+    animation: none;
+  }
+  .card-enter {
+    opacity: 1;
+  }
+}
+
 /* ── Floating Adinkra bubble animation ─────────────────────── */
 @keyframes adinkra-rise {
   0% {
