@@ -129,7 +129,7 @@ export default function WorkHistory() {
                 style={{ transform: `rotate(${role.rotation})` }}
               >
                 {/* Logo */}
-                <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-md bg-white border border-ink/[0.06] shadow-[0_1px_3px_rgba(0,0,0,0.05)] overflow-hidden">
+                <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-white border border-ink/[0.06] shadow-[0_1px_3px_rgba(0,0,0,0.05)] overflow-hidden">
                   {role.logo ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
