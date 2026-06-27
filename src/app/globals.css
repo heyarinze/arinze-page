@@ -201,6 +201,22 @@ a.accent-link:hover {
   }
 }
 
+/* ── Current Games: fluorescent glow on hover ──────────────── */
+.game-tile img {
+  transition: filter 0.35s ease, transform 0.35s ease;
+}
+.game-tile:hover img {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 6px var(--glow)) drop-shadow(0 0 18px var(--glow));
+}
+.game-tile.invert-logo img {
+  filter: invert(1) brightness(1.7);
+}
+.game-tile.invert-logo:hover img {
+  transform: scale(1.05);
+  filter: invert(1) brightness(1.7) drop-shadow(0 0 6px var(--glow)) drop-shadow(0 0 18px var(--glow));
+}
+
 /* ── Floating Adinkra bubble animation ─────────────────────── */
 @keyframes adinkra-rise {
   0% {

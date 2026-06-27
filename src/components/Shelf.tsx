@@ -1,7 +1,13 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, type CSSProperties } from "react";
 import { SectionHeader } from "./Glyph";
+
+const games = [
+  { name: "Cyberpunk 2077", logo: "/games/cyberpunk.png", link: "https://www.cyberpunk.net/", glow: "#fff200", maxH: 62 },
+  { name: "Tears of the Kingdom", logo: "/games/zelda.png", link: "https://www.zelda.com/tears-of-the-kingdom/", glow: "#48f0b0", maxH: 86 },
+  { name: "Fortnite", logo: "/games/fortnite.svg", link: "https://www.fortnite.com/", glow: "#2ad4ff", invert: true, maxH: 34 },
+];
 
 export default function Shelf() {
   useEffect(() => {
@@ -147,7 +153,7 @@ export default function Shelf() {
           </h3>
           <iframe
             style={{ borderRadius: 12 }}
-            src="https://open.spotify.com/embed/playlist/3MAl0mn57b1j8XDm72rBYD?utm_source=generator"
+            src="https://open.spotify.com/embed/playlist/2JfVdyBRmSSyzqhZGHs7r7?utm_source=generator"
             width="100%"
             height="352"
             frameBorder="0"
@@ -159,14 +165,45 @@ export default function Shelf() {
         </div>
       </div>
 
-      {/* Recent Watch - Letterboxd Embed */}
-      <div className="mt-10">
-        <h3 className="font-display text-xl font-semibold text-ink mb-4 flex items-center gap-2">
-          <span className="text-gold glyph text-sm">▲</span>
-          Recent Watch
-        </h3>
-        <div className="border border-white/20 rounded-lg p-4 bg-white/30 backdrop-blur-sm">
-          <div id="letterboxd-embed-wrapper-tc">Loading...</div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10">
+        {/* Recent Watch - Letterboxd Embed */}
+        <div>
+          <h3 className="font-display text-xl font-semibold text-ink mb-4 flex items-center gap-2">
+            <span className="text-gold glyph text-sm">▲</span>
+            Recent Watch
+          </h3>
+          <div className="border border-white/20 rounded-lg p-4 bg-white/30 backdrop-blur-sm">
+            <div id="letterboxd-embed-wrapper-tc">Loading...</div>
+          </div>
+        </div>
+
+        {/* Current Games */}
+        <div>
+          <h3 className="font-display text-xl font-semibold text-ink mb-4 flex items-center gap-2">
+            <span className="text-purple glyph text-sm">⬢</span>
+            Current Games
+          </h3>
+          <div className="rounded-lg p-6 bg-ink border border-white/10 flex flex-col items-center justify-around gap-6 min-h-[300px]">
+            {games.map((g) => (
+              <a
+                key={g.name}
+                href={g.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={g.name}
+                className={`game-tile ${g.invert ? "invert-logo" : ""} flex h-20 w-full items-center justify-center`}
+                style={{ "--glow": g.glow } as CSSProperties}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={g.logo}
+                  alt={`${g.name} logo`}
+                  className="max-w-[78%] object-contain"
+                  style={{ maxHeight: g.maxH }}
+                />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </section>
