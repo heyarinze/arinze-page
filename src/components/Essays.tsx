@@ -26,12 +26,7 @@ export default function Essays() {
 
   return (
     <section ref={sectionRef} className="max-w-5xl mx-auto px-6">
-      <div className="flex items-end justify-between gap-4 flex-wrap">
-        <SectionHeader title="My Writing" glyph="▲" id="thoughts" description="Some ideas and experiences I made time to flesh out" />
-        <span className="mb-10 text-sm font-bold uppercase tracking-[0.2em] text-coral select-none -rotate-6 inline-block">
-          drag / scroll →
-        </span>
-      </div>
+      <SectionHeader title="My Writing" glyph="▲" id="thoughts" description="Some ideas and experiences I made time to flesh out" />
 
       <div className="carousel-fade flex gap-5 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-6 -mx-6 px-6">
         {shelfData.published.map((item, i) => (
@@ -67,6 +62,20 @@ export default function Essays() {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Newsletter embed */}
+      <div className="mt-12 flex justify-center">
+        <iframe
+          src="https://heyarinze.substack.com/embed?transparent=1"
+          width="480"
+          height="320"
+          className="max-w-full"
+          style={{ border: 0, background: "transparent" }}
+          frameBorder="0"
+          scrolling="no"
+          title="Subscribe to Arinze's newsletter"
+        />
       </div>
     </section>
   );
