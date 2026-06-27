@@ -108,7 +108,7 @@ export default function Hero() {
         <div className="mt-8 max-w-xl relative">
           <span className="margin-note hidden lg:block">welcome</span>
           <p className="text-sm leading-relaxed text-ink-light">
-            Welcome to my digital living room. This is where I keep track of
+            Welcome to my digital living room. This is where I share some of
             what I&apos;m building, reading, listening to, and thinking about.
             Pull up a chair — look around. Everything here, like me, is a work
             in progress.
