@@ -43,7 +43,7 @@ const roles: Role[] = [
   },
   {
     org: "Schwarzman Scholars",
-    title: "Master's, Global Affairs · AI Policy",
+    title: "Master's, Global Affairs (AI Policy) • Tsinghua University",
     period: "2021–2022",
     kind: "study",
     logo: "/logos/schwarzman.jpeg",
