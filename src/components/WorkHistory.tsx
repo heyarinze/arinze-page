@@ -125,7 +125,7 @@ export default function WorkHistory() {
               <div
                 className={`relative pt-6 pb-4 px-5 text-center transition-all duration-300
                   bg-white/[0.35] backdrop-blur-[6px]
-                  border ${role.incoming ? "border-coral/40" : "border-white/50"}
+                  border ${role.incoming ? "border-transparent snake-border" : "border-white/50"}
                   shadow-[0_1px_8px_rgba(0,0,0,0.04),inset_0_1px_0_rgba(255,255,255,0.5)]
                   hover:shadow-[0_4px_16px_rgba(0,0,0,0.08),inset_0_1px_0_rgba(255,255,255,0.6)]
                   hover:-translate-y-1`}
