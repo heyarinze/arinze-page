@@ -7,7 +7,6 @@ interface Role {
   period: string;
   kind: "work" | "study";
   logo?: string;
-  cropLeft?: boolean;
   mono?: string;
   note?: string;
   incoming?: boolean;
@@ -16,7 +15,7 @@ interface Role {
 
 const roles: Role[] = [
   {
-    org: "ALU",
+    org: "African Leadership University",
     title: "Inaugural Class · BSc Business Management",
     period: "2015–2020",
     kind: "study",
@@ -38,7 +37,6 @@ const roles: Role[] = [
     period: "2020–2023",
     kind: "work",
     logo: "/logos/earlyadmit.jpeg",
-    cropLeft: true,
     note: "Acquired",
     rotation: "-0.6deg",
   },
@@ -137,7 +135,7 @@ export default function WorkHistory() {
                     <img
                       src={role.logo}
                       alt={`${role.org} logo`}
-                      className={role.cropLeft ? "h-full w-full object-cover object-left" : "h-8 w-8 object-contain"}
+                      className="h-8 w-8 object-contain"
                     />
                   ) : (
                     <span className="font-display text-base font-bold text-ink">
