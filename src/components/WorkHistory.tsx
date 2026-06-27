@@ -8,6 +8,7 @@ interface Role {
   kind: "work" | "study";
   logo?: string;
   logoBg?: string;
+  logoClass?: string;
   mono?: string;
   note?: string;
   incoming?: boolean;
@@ -34,7 +35,7 @@ const roles: Role[] = [
   },
   {
     org: "EarlyAdmit",
-    title: "Co-Founder",
+    title: "Co-Founder & Chief Product Officer",
     period: "2020–2023",
     kind: "work",
     logo: "/logos/earlyadmit.jpeg",
@@ -73,6 +74,7 @@ const roles: Role[] = [
     kind: "study",
     logo: "/logos/gsb.jpeg",
     logoBg: "#a1011f",
+    logoClass: "h-full w-full",
     rotation: "-0.8deg",
   },
   {
@@ -141,7 +143,7 @@ export default function WorkHistory() {
                     <img
                       src={role.logo}
                       alt={`${role.org} logo`}
-                      className="h-8 w-8 object-contain"
+                      className={`${role.logoClass ?? "h-8 w-8"} object-contain`}
                     />
                   ) : (
                     <span className="font-display text-base font-bold text-ink">
