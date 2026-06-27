@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import WorkHistory from "@/components/WorkHistory";
 import Timeline from "@/components/Timeline";
 import Extracurriculars from "@/components/Extracurriculars";
 import Work from "@/components/Work";
@@ -14,6 +15,8 @@ export default function Home() {
       <Hero />
       <SectionDivider />
       <About />
+      <SectionDivider />
+      <WorkHistory />
       <SectionDivider />
       <Timeline />
       <SectionDivider />
