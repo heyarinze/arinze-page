@@ -95,17 +95,12 @@ const roles: Role[] = [
 export default function WorkHistory() {
   return (
     <section className="max-w-6xl mx-auto px-6">
-      <div className="flex items-end justify-between gap-4 flex-wrap">
-        <SectionHeader
-          title="My Career"
-          glyph="❖"
-          id="career"
-          description="The path I'm walking"
-        />
-        <span className="mb-10 text-sm font-bold uppercase tracking-[0.2em] text-coral select-none -rotate-6 inline-block">
-          drag / scroll →
-        </span>
-      </div>
+      <SectionHeader
+        title="My Career"
+        glyph="❖"
+        id="career"
+        description="The path I'm walking"
+      />
 
       <div className="carousel-fade flex items-center overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 -mx-6 px-6">
         {roles.map((role, i) => (
@@ -162,7 +157,7 @@ export default function WorkHistory() {
                 </p>
 
                 {/* Org */}
-                <h3 className="font-display text-lg font-semibold tracking-tight text-ink mt-1.5 leading-tight">
+                <h3 className="font-display text-base tracking-tight text-ink mt-1.5 leading-tight">
                   {role.org}
                 </h3>
 
