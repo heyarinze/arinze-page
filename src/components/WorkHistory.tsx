@@ -7,6 +7,7 @@ interface Role {
   period: string;
   kind: "work" | "study";
   logo?: string;
+  logoBg?: string;
   mono?: string;
   note?: string;
   incoming?: boolean;
@@ -54,6 +55,7 @@ const roles: Role[] = [
     period: "2022–present",
     kind: "work",
     logo: "/logos/kenga.png",
+    logoBg: "#000000",
     rotation: "-1deg",
   },
   {
@@ -70,6 +72,7 @@ const roles: Role[] = [
     period: "2024–2026",
     kind: "study",
     logo: "/logos/gsb.jpeg",
+    logoBg: "#a1011f",
     rotation: "-0.8deg",
   },
   {
@@ -129,7 +132,10 @@ export default function WorkHistory() {
                 style={{ transform: `rotate(${role.rotation})` }}
               >
                 {/* Logo */}
-                <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-white border border-ink/[0.06] shadow-[0_1px_3px_rgba(0,0,0,0.05)] overflow-hidden">
+                <div
+                  className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl border border-ink/[0.06] shadow-[0_1px_3px_rgba(0,0,0,0.05)] overflow-hidden"
+                  style={{ backgroundColor: role.logoBg ?? "#ffffff" }}
+                >
                   {role.logo ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
