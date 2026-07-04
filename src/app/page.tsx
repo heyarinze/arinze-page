@@ -14,6 +14,8 @@ export default function Home() {
     <>
       <Hero />
       <SectionDivider />
+      <Essays />
+      <SectionDivider />
       <About />
       <SectionDivider />
       <Timeline />
@@ -23,8 +25,6 @@ export default function Home() {
       <Work />
       <SectionDivider />
       <Extracurriculars />
-      <SectionDivider />
-      <Essays />
       <SectionDivider />
       <Shelf />
       <SectionDivider />
