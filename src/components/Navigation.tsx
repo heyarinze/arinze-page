@@ -24,6 +24,7 @@ export default function Navigation() {
           className="flex items-center hover:opacity-80 transition-opacity"
         >
           <Image
+            id="nav-logo"
             src="/favicon.ico"
             alt="A.O."
             width={28}
