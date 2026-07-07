@@ -95,7 +95,7 @@ export default function Hero() {
         {/* Let's Chat button */}
         <div className="mt-6">
           <a
-            href="https://www.bit.ly/arinzechat"
+            href="https://www.joinleland.com/coach/arinze-o"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block stamp text-ink hover:text-coral hover:border-coral transition-colors cursor-pointer"
