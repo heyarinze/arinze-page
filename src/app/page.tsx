@@ -14,13 +14,13 @@ export default function Home() {
     <>
       <Hero />
       <SectionDivider />
-      <Essays />
-      <SectionDivider />
       <About />
       <SectionDivider />
       <Timeline />
       <SectionDivider />
       <WorkHistory />
+      <SectionDivider />
+      <Essays />
       <SectionDivider />
       <Work />
       <SectionDivider />
