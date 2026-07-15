@@ -38,17 +38,17 @@ export default function Shelf() {
             dangerouslySetInnerHTML={{
               __html: `
                 <style>
-                  .gr_custom_container_1771065670 {
+                  .gr_custom_container_1784145411 {
                     border: none;
                     padding: 0;
                     background-color: transparent;
                     color: #1a1a1a;
                     width: 100%;
                   }
-                  .gr_custom_header_1771065670 {
+                  .gr_custom_header_1784145411 {
                     display: none;
                   }
-                  .gr_custom_each_container_1771065670 {
+                  .gr_custom_each_container_1784145411 {
                     width: 100%;
                     clear: both;
                     margin-bottom: 10px;
@@ -56,81 +56,138 @@ export default function Shelf() {
                     padding-bottom: 8px;
                     border-bottom: 1px solid #eee;
                   }
-                  .gr_custom_book_container_1771065670 {
+                  .gr_custom_book_container_1784145411 {
                     overflow: hidden;
                     height: 60px;
                     float: left;
                     margin-right: 10px;
                     width: 39px;
                   }
-                  .gr_custom_author_1771065670 {
+                  .gr_custom_author_1784145411 {
                     font-size: 11px;
                     color: #4a4a4a;
                   }
-                  .gr_custom_tags_1771065670 {
+                  .gr_custom_tags_1784145411 {
                     font-size: 10px;
                     color: gray;
                   }
-                  .gr_custom_title_1771065670 a {
+                  .gr_custom_title_1784145411 a {
                     font-size: 13px;
                     color: #1a1a1a;
                     text-decoration: none;
                   }
-                  .gr_custom_title_1771065670 a:hover {
+                  .gr_custom_title_1784145411 a:hover {
                     color: #E8573A;
                   }
-                  .gr_custom_author_1771065670 a {
+                  .gr_custom_author_1784145411 a {
                     color: #4a4a4a;
                     text-decoration: none;
                   }
-                  .gr_custom_rating_1771065670 {
+                  .gr_custom_rating_1784145411 {
                     float: right;
                   }
                 </style>
-                <div id="gr_custom_widget_1771065670">
-                  <div class="gr_custom_container_1771065670">
-                    <div class="gr_custom_each_container_1771065670">
-                      <div class="gr_custom_book_container_1771065670">
-                        <a title="Curiosity and I: Let Curiosity Guide You" rel="nofollow" href="https://www.goodreads.com/review/show/8129934368?utm_medium=api&amp;utm_source=custom_widget"><img alt="Curiosity and I" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1764880513l/244799405._SY75_.jpg" /></a>
+                <div id="gr_custom_widget_1784145411">
+                  <div class="gr_custom_container_1784145411">
+                    <h2 class="gr_custom_header_1784145411">
+                      <a style="text-decoration: none;" rel="nofollow" href="https://www.goodreads.com/review/list/46208340-arinze-obiezue?shelf=read&amp;utm_medium=api&amp;utm_source=custom_widget">Arinze&#39;s Recent Reads</a>
+                    </h2>
+                    <div class="gr_custom_each_container_1784145411">
+                      <div class="gr_custom_book_container_1784145411">
+                        <a title="The Next Renaissance: AI and the Expansion of Human Potential" rel="nofollow" href="https://www.goodreads.com/review/show/8768395563?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Next Renaissance: AI and the Expansion of Human Potential" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1749466172l/233029866._SX50_.jpg" /></a>
                       </div>
-                      <div class="gr_custom_title_1771065670">
-                        <a rel="nofollow" href="https://www.goodreads.com/review/show/8129934368?utm_medium=api&amp;utm_source=custom_widget">Curiosity and I: Let Curiosity Guide You</a>
+                      <div class="gr_custom_rating_1784145411">
+                        <span class=" staticStars notranslate" title="really liked it"><img alt="really liked it" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /></span>
                       </div>
-                      <div class="gr_custom_author_1771065670">
-                        by <a rel="nofollow" href="https://www.goodreads.com/author/show/63530727.O_Nell_Agossa">O'Nell Agossa</a>
+                      <div class="gr_custom_title_1784145411">
+                        <a rel="nofollow" href="https://www.goodreads.com/review/show/8768395563?utm_medium=api&amp;utm_source=custom_widget">The Next Renaissance: AI and the Expansion of Human Potential</a>
                       </div>
-                    </div>
-                    <div class="gr_custom_each_container_1771065670">
-                      <div class="gr_custom_book_container_1771065670">
-                        <a title="Letters to a Young Poet" rel="nofollow" href="https://www.goodreads.com/review/show/7996394807?utm_medium=api&amp;utm_source=custom_widget"><img alt="Letters to a Young Poet" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1451428522l/28385945._SX50_.jpg" /></a>
-                      </div>
-                      <div class="gr_custom_title_1771065670">
-                        <a rel="nofollow" href="https://www.goodreads.com/review/show/7996394807?utm_medium=api&amp;utm_source=custom_widget">Letters to a Young Poet</a>
-                      </div>
-                      <div class="gr_custom_author_1771065670">
-                        by <a rel="nofollow" href="https://www.goodreads.com/author/show/7906.Rainer_Maria_Rilke">Rainer Maria Rilke</a>
+                      <div class="gr_custom_author_1784145411">
+                        by <a rel="nofollow" href="https://www.goodreads.com/author/show/56225618.Zack_Kass">Zack Kass</a>
                       </div>
                     </div>
-                    <div class="gr_custom_each_container_1771065670">
-                      <div class="gr_custom_book_container_1771065670">
-                        <a title="Inward" rel="nofollow" href="https://www.goodreads.com/review/show/7897476596?utm_medium=api&amp;utm_source=custom_widget"><img alt="Inward" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1510863553l/36607463._SY75_.jpg" /></a>
+                    <div class="gr_custom_each_container_1784145411">
+                      <div class="gr_custom_book_container_1784145411">
+                        <a title="Enemies of Promise" rel="nofollow" href="https://www.goodreads.com/review/show/7771502710?utm_medium=api&amp;utm_source=custom_widget"><img alt="Enemies of Promise" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1269858972l/88857._SY75_.jpg" /></a>
                       </div>
-                      <div class="gr_custom_title_1771065670">
-                        <a rel="nofollow" href="https://www.goodreads.com/review/show/7897476596?utm_medium=api&amp;utm_source=custom_widget">Inward</a>
+                      <div class="gr_custom_rating_1784145411">
+                        <span class=" staticStars notranslate" title="liked it"><img alt="liked it" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /></span>
                       </div>
-                      <div class="gr_custom_author_1771065670">
-                        by <a rel="nofollow" href="https://www.goodreads.com/author/show/17333166.Yung_Pueblo">Yung Pueblo</a>
+                      <div class="gr_custom_title_1784145411">
+                        <a rel="nofollow" href="https://www.goodreads.com/review/show/7771502710?utm_medium=api&amp;utm_source=custom_widget">Enemies of Promise</a>
+                      </div>
+                      <div class="gr_custom_author_1784145411">
+                        by <a rel="nofollow" href="https://www.goodreads.com/author/show/51067.Cyril_Connolly">Cyril Connolly</a>
                       </div>
                     </div>
-                    <div class="gr_custom_each_container_1771065670">
-                      <div class="gr_custom_book_container_1771065670">
-                        <a title="The Great Mental Models, Volume 3: Systems and Mathematics" rel="nofollow" href="https://www.goodreads.com/review/show/7772937649?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Great Mental Models, Volume 3" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1718698423l/205435119._SY75_.jpg" /></a>
+                    <div class="gr_custom_each_container_1784145411">
+                      <div class="gr_custom_book_container_1784145411">
+                        <a title="The Yahoo Boys: Real Life with the Love Scammers of Lagos" rel="nofollow" href="https://www.goodreads.com/review/show/8682909028?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Yahoo Boys: Real Life with the Love Scammers of Lagos" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1767719188l/238864933._SY75_.jpg" /></a>
                       </div>
-                      <div class="gr_custom_title_1771065670">
-                        <a rel="nofollow" href="https://www.goodreads.com/review/show/7772937649?utm_medium=api&amp;utm_source=custom_widget">The Great Mental Models, Volume 3: Systems and Mathematics</a>
+                      <div class="gr_custom_rating_1784145411">
+                        <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /></span>
                       </div>
-                      <div class="gr_custom_author_1771065670">
-                        by <a rel="nofollow" href="https://www.goodreads.com/author/show/7871969.Shane_Parrish">Shane Parrish</a>
+                      <div class="gr_custom_title_1784145411">
+                        <a rel="nofollow" href="https://www.goodreads.com/review/show/8682909028?utm_medium=api&amp;utm_source=custom_widget">The Yahoo Boys: Real Life with the Love Scammers of Lagos</a>
+                      </div>
+                      <div class="gr_custom_author_1784145411">
+                        by <a rel="nofollow" href="https://www.goodreads.com/author/show/67753648.Carlos_Barrag_n">Carlos  Barragán</a>
+                      </div>
+                    </div>
+                    <div class="gr_custom_each_container_1784145411">
+                      <div class="gr_custom_book_container_1784145411">
+                        <a title="Thinking In Systems: A Primer" rel="nofollow" href="https://www.goodreads.com/review/show/8451524044?utm_medium=api&amp;utm_source=custom_widget"><img alt="Thinking In Systems: A Primer" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1390169859l/3828902._SY75_.jpg" /></a>
+                      </div>
+                      <div class="gr_custom_rating_1784145411">
+                        <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /></span>
+                      </div>
+                      <div class="gr_custom_title_1784145411">
+                        <a rel="nofollow" href="https://www.goodreads.com/review/show/8451524044?utm_medium=api&amp;utm_source=custom_widget">Thinking In Systems: A Primer</a>
+                      </div>
+                      <div class="gr_custom_author_1784145411">
+                        by <a rel="nofollow" href="https://www.goodreads.com/author/show/307638.Donella_H_Meadows">Donella H. Meadows</a>
+                      </div>
+                    </div>
+                    <div class="gr_custom_each_container_1784145411">
+                      <div class="gr_custom_book_container_1784145411">
+                        <a title="Dead-End Memories: Stories" rel="nofollow" href="https://www.goodreads.com/review/show/8606042382?utm_medium=api&amp;utm_source=custom_widget"><img alt="Dead-End Memories: Stories" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1641461147l/60044990._SY75_.jpg" /></a>
+                      </div>
+                      <div class="gr_custom_rating_1784145411">
+                        <span class=" staticStars notranslate" title="really liked it"><img alt="really liked it" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /></span>
+                      </div>
+                      <div class="gr_custom_title_1784145411">
+                        <a rel="nofollow" href="https://www.goodreads.com/review/show/8606042382?utm_medium=api&amp;utm_source=custom_widget">Dead-End Memories: Stories</a>
+                      </div>
+                      <div class="gr_custom_author_1784145411">
+                        by <a rel="nofollow" href="https://www.goodreads.com/author/show/28229.Banana_Yoshimoto">Banana Yoshimoto</a>
+                      </div>
+                    </div>
+                    <div class="gr_custom_each_container_1784145411">
+                      <div class="gr_custom_book_container_1784145411">
+                        <a title="A Thousand Years of Good Prayers" rel="nofollow" href="https://www.goodreads.com/review/show/8584576599?utm_medium=api&amp;utm_source=custom_widget"><img alt="A Thousand Years of Good Prayers" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1386006916l/19101254._SY75_.jpg" /></a>
+                      </div>
+                      <div class="gr_custom_rating_1784145411">
+                        <span class=" staticStars notranslate" title="liked it"><img alt="liked it" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /></span>
+                      </div>
+                      <div class="gr_custom_title_1784145411">
+                        <a rel="nofollow" href="https://www.goodreads.com/review/show/8584576599?utm_medium=api&amp;utm_source=custom_widget">A Thousand Years of Good Prayers</a>
+                      </div>
+                      <div class="gr_custom_author_1784145411">
+                        by <a rel="nofollow" href="https://www.goodreads.com/author/show/148348.Yiyun_Li">Yiyun Li</a>
+                      </div>
+                    </div>
+                    <div class="gr_custom_each_container_1784145411">
+                      <div class="gr_custom_book_container_1784145411">
+                        <a title="Siddhartha" rel="nofollow" href="https://www.goodreads.com/review/show/8560618553?utm_medium=api&amp;utm_source=custom_widget"><img alt="Siddhartha" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1679634247l/123699900._SX50_.jpg" /></a>
+                      </div>
+                      <div class="gr_custom_rating_1784145411">
+                        <span class=" staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /></span>
+                      </div>
+                      <div class="gr_custom_title_1784145411">
+                        <a rel="nofollow" href="https://www.goodreads.com/review/show/8560618553?utm_medium=api&amp;utm_source=custom_widget">Siddhartha</a>
+                      </div>
+                      <div class="gr_custom_author_1784145411">
+                        by <a rel="nofollow" href="https://www.goodreads.com/author/show/1113469.Hermann_Hesse">Hermann Hesse</a>
                       </div>
                     </div>
                     <br style="clear: both"/>
@@ -139,7 +196,7 @@ export default function Shelf() {
                     </center>
                   </div>
                 </div>
-                <script src="https://www.goodreads.com/review/custom_widget/46208340.My%20Recent%20Reads?cover_position=left&cover_size=small&num_books=5&order=d&shelf=read&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=1&show_title=1&sort=date_added&widget_bg_color=FFFFFF&widget_bg_transparent=&widget_border_width=1&widget_id=1771065670&widget_text_color=000000&widget_title_size=medium&widget_width=medium" type="text/javascript" charset="utf-8"></script>
+                <script src="https://www.goodreads.com/review/custom_widget/46208340.Arinze's%20Recent%20Reads?cover_position=left&cover_size=small&num_books=7&order=d&shelf=read&show_author=1&show_cover=1&show_rating=1&show_review=0&show_tags=1&show_title=1&sort=date_read&widget_bg_color=FFFFFF&widget_bg_transparent=&widget_border_width=1&widget_id=1784145411&widget_text_color=000000&widget_title_size=medium&widget_width=medium" type="text/javascript" charset="utf-8"></script>
               `,
             }}
           />
